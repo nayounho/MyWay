@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // entry files
@@ -26,6 +27,9 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({ title: 'Hot Module Replacement', template: './public/index.html', scriptLoading: 'defer' }),
+  ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
