@@ -1,2 +1,23 @@
 @import 'vars';
 
+@mixin mainBox {
+  width: 300px;
+  box-shadow: 5px 5px $grey;
+  border-radius: 5px;
+}
+
+main {
+  width: 762px;
+  margin: 0 auto;
+}
+.main__choose {
+  @include mainBox();
+  margin: 26px;
+
+  .choose__head {
+    height: 40px;
+    padding-left: 10px;
+    background-color: $yellow;
+    border-radius: 5px 5px 0 0;
+  }
+}
