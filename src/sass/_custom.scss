@@ -1,0 +1,84 @@
+@import './vars.scss';
+
+@mixin mainBox {
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px $grey-for-shadow;
+}
+
+.main__custom {
+  @include mainBox();
+  background-color: $white;
+}
+
+.custom__heading {
+  background-color: $yellow;
+  color: $white;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: $heading-font-size;
+  font-weight: 400;
+}
+
+.custom__list-static {
+  padding: 17px 20px;
+  font-size: $content-font-size;
+  font-weight: 700;
+  border-bottom: 1px solid $grey-for-shadow;
+
+  li {
+    margin-top: 12px;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  li:first-child {
+    margin-top: 0;
+  }
+}
+
+.custom__list-dynamic {
+  padding: 17px 20px;
+
+  .list-dynamic__item {
+    position: relative;
+    margin-top: 14px;
+  }
+
+  .list-dynamic__item:first-child {
+    margin-top: 0;
+  }
+
+  .list-dynamic__num {
+    width: 36px;
+    height: 20px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  label {
+    font-size: $content-font-size;
+    line-height: 26px;
+  }
+
+  .list-dynamic__del {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    cursor: pointer;
+    background-color: $black;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    outline-style: none;
+    font-size: 1.1rem;
+    color: $white;
+  }
+}
