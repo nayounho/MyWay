@@ -1,10 +1,21 @@
-@import './'
+@import './vars.scss';
+
+@mixin mainBox {
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px $grey-for-shadow;
+}
 
 .main__custom {
+  @include mainBox();
+  background-color: mediumorchid;
 }
 .custom__heading {
-}
-.custom__list-static > li {
-}
-.custom__list-dynamic {
+  background-color: $yellow;
+  color: $white;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
