@@ -6,7 +6,6 @@
   width: 250px;
   border: 1px solid $grey;
   border-radius: 5px;
-  font-size: $content-font-size;
 }
 
 @mixin icon {
@@ -17,6 +16,8 @@
 
 .modal {
   display: none;
+  font-size: .8rem;
+  user-select: none;
 
   div,
   li {
@@ -25,10 +26,7 @@
 
   div {
     position: relative;
-  }
-
-  li:hover {
-    background-color: $grey-for-shadow;
+    border-bottom: 1px solid $grey-for-shadow;
   }
 
   i {
@@ -38,15 +36,56 @@
     top: 13px;
   }
 
+  ul {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+
+  li:hover {
+    background-color: $grey-for-shadow;
+  }
+
   label {
     margin-left: 5px;
   }
 
+  // checkbox styling
+  input[type="checkbox"] {
+    display: none;
+
+    & + label {
+      padding-left: 30px;
+      line-height: 22px;
+      position: relative;
+    }
+
+    & + label::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: -10%;
+      left: 0;
+      background-color: $true-white;
+      border: solid 1px $grey;
+      border-radius: 3px;
+    }
+
+    &:checked + label::before {
+      content: "\f00c";
+      font-family: fontAwesome;
+      width: 18px;
+      height: 18px;
+      text-align: center;
+      background-color: $grey;
+      color: $white;
+    }
+  }
+
+  // modal display
   &.open {
     @include select();
     display: block;
-    max-height: 300px;
-    // overflow-y: scroll;
   }
 
   &.open + div {
@@ -58,6 +97,7 @@
   @include select();
   padding: 8px 5px;
   position: relative;
+  font-size: .8rem;
 
   i {
     @include icon();
