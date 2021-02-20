@@ -49,6 +49,41 @@
     margin-left: 5px;
   }
 
+  // radio styling
+  input[type="radio"] {
+    display: none;
+
+    & + label {
+      padding-left: 30px;
+      line-height: 22px;
+      position: relative;
+    }
+
+    & + label::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: -10%;
+      left: 0;
+      background-color: $true-white;
+      border: solid 1px $grey;
+      border-radius: 50px;
+    }
+
+    &:checked + label::before {
+      content: "●";
+      width: 18px;
+      height: 18px;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 18px;
+      font-size: 10px;
+      background-color: $grey;
+      color: $white;
+    }
+  }
+
   // checkbox styling
   input[type="checkbox"] {
     display: none;
