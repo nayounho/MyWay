@@ -1,0 +1,43 @@
+@import './vars.scss';
+
+header {
+  height: 100px;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 115px;
+  }
+}
+
+footer {
+  height: 100px;
+  background-color: $grey;
+  color: $true-white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 116px;
+  }
+
+  .about-us {
+    margin: 18;
+    font-size: $content-font-size;
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    transform: translate3d(15px, 0, 0);
+  }
+  a, a:visited {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 50px;
+    padding: 10 0px;
+    font-weight: 700;
+  }
+}
