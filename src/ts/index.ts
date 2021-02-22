@@ -1,7 +1,9 @@
-import fetchMyFavorite from './myFavoriteRender';
+import renderMyFavorite from './renderMyFavorite';
 import { resetTitle, generateName } from './generateName';
 
 generateName();
 resetTitle();
 
-document.addEventListener('DOMContentLoaded', fetchMyFavorite);
+document.addEventListener('DOMContentLoaded', () => {
+  renderMyFavorite();
+});
