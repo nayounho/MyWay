@@ -21,7 +21,7 @@ const menu = {
     { id: 'veggies2', name: 'Carrots', calories: 5 },
     { id: 'veggies3', name: 'Cucumbers', calories: 0 },
   ],
-  condiments: [
+  sauce: [
     { id: 'condiments1', name: 'Barbecue Sauce', calories: 35 },
     { id: 'condiments2', name: 'Buffalo Sauce', calories: 5 },
     { id: 'condiments3', name: 'Chipotle Southwest Sauce', calories: 100 },
@@ -78,8 +78,8 @@ app.get('/menu', (_, res) => {
 app.get('/menu.bread', (_, res) => {
   res.send(menu.bread);
 });
-app.get('/menu.meatsProtieins', (_, res) => {
-  res.send(menu.meatsProtieins);
+app.get('/menu.meats', (_, res) => {
+  res.send(menu.meats);
 });
 app.get('/menu.cheese', (_, res) => {
   res.send(menu.cheese);
@@ -87,8 +87,8 @@ app.get('/menu.cheese', (_, res) => {
 app.get('/menu.veggies', (_, res) => {
   res.send(menu.veggies);
 });
-app.get('/menu.condiments', (_, res) => {
-  res.send(menu.condiments);
+app.get('/menu.sauce', (_, res) => {
+  res.send(menu.sauce);
 });
 app.get('/menu.extras', (_, res) => {
   res.send(menu.extras);
