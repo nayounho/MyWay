@@ -19,12 +19,14 @@
       <h2 class="main__heading">
         <div class="heading__text">써브웨이 칼로리 계산기</div>
       </h2>
-      <section class="title">
-        <label for="titleInput">
-          <input type="text" id="titleInput" class="title__input" placeholder="hi"
-        /></label>
-      </section>
-      <section class="main__calc"><span>0</span><span> kcal</span></section>
+      <div class="title-container">
+        <section class="title">
+          <label for="titleInput">
+            <input type="text" id="titleInput" class="title__input" placeholder="My Favorite Sub!"
+          /></label>
+        </section>
+        <section class="main__calc"><span>0</span><span> kcal</span></section>
+      </div>
       <div class="choose-custom-container">
         <section class="main__choose">
           <h1 class="choose__heading">메뉴 & 재료 선택하기</h1>
@@ -148,15 +150,19 @@
           </ul>
         </section>
       </div>
-      <button class="myway-btn" style="background-color: aquamarine">MY WAY</button>
+      <button class="myway-btn">MY WAY</button>
       <section class="main__myway">
+        <h2 class="myway__title">MY WAYs</h2>
         <ul class="myway__list">
-          <!-- <li class="myway__item">
-          <figure>
-            <img src="" alt="">
-            <figcaption></figcaption>
-          </figure>
-        </li> -->
+          <li class="myway__item">
+            <figure>
+              <img
+                src="https://m.subway.co.kr/images/menu/sandwich_cl03.jpg"
+                alt="subway-meatball"
+              />
+              <figcaption>꿀조합</figcaption>
+            </figure>
+          </li>
         </ul>
       </section>
     </main>
