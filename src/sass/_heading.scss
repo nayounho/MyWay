@@ -1,3 +1,46 @@
+@import './vars.scss';
+
 .main__heading {
-  background-color: tomato;
+  width: 762px;
+  margin: 0 auto;
+  color: $black;
+  font-size: 25px;
+  line-height: 29px;
+  font-weight: 400px;
+}
+
+.heading__text {
+  padding: 4.3px 25px;
+}
+
+.heading__text:after {
+  content: '';
+  display: block;
+  margin-top: 19px;
+  border-bottom: 1px solid $black;
+}
+
+.title__input {
+  width: 280px;
+  height: 29px;
+  font-size: 30px;
+  font-weight: 400;
+  color: $grey;
+  border: #ccc;
+}
+
+.title:after {
+  content: '';
+  display: block;
+  margin-top: 10px;
+  border-bottom: 1px solid $grey;
+}
+
+.main__calc {
+  position: absolute;
+  margin-top: 9px;
+  left: 846px;
+  height: 38px;
+  font-size: 30px;
+  font-weight: 400;
 }
