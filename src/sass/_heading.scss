@@ -1,8 +1,6 @@
 @import './vars.scss';
 
 .main__heading {
-  width: 762px;
-  margin: 0 auto;
   color: $black;
   font-size: 25px;
   line-height: 29px;
@@ -12,6 +10,8 @@
 
 .heading__text {
   padding: 4.3px 25px;
+  width: 762px;
+  margin: 0 auto;
 }
 
 .heading__text:after {

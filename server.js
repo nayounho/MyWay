@@ -48,6 +48,19 @@ const myFavorite = [
     ],
     calories: 565,
   },
+  {
+    id: 2,
+    name: 'My Favorite 1',
+    item: [
+      { id: 'bread1', name: '9-Grain Honey Oat Bread', calories: 230, quantity: 1 },
+      { id: 'meats1', name: 'BBQ Pulled Pork', calories: 200, quantity: 2, url: 'https://www.subway.co.kr/images/menu/sandwich_pm08.jpg' },
+      { id: 'cheese1', name: 'American Cheese', calories: 40, quantity: 1 },
+      { id: 'veggies1', name: 'Banana Peppers', calories: 0, quantity: 1 },
+      { id: 'condiments1', name: 'Barbecue Sauce', calories: 35, quantity: 3 },
+      { id: 'extras1', name: 'Avocado', calories: 60, quantity: 1 },
+    ],
+    calories: 565,
+  },
 ];
 
 const app = express();
