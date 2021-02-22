@@ -93,6 +93,11 @@ app.get('/menu.sauce', (_, res) => {
 app.get('/menu.extras', (_, res) => {
   res.send(menu.extras);
 });
+app.get('/menu.:id', (req, res) => {
+  const _id = req.params.id;
+  const stringId = _id.replace(/[0-9]+/, '');
+  res.send(...menu[stringId].filter(v => v.id === _id));
+});
 
 app.get('/myFavorite', (_, res) => {
   res.send(myFavorite);
