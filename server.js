@@ -2,35 +2,35 @@ const express = require('express');
 
 const menu = {
   bread: [
-    { id: 1, name: '9-Grain Honey Oat Bread', calories: 230 },
-    { id: 2, name: '9-Grain Wheat Bread', calories: 210 },
-    { id: 3, name: 'Artisan Flatbread', calories: 230 },
+    { id: 'bread1', name: '9-Grain Honey Oat Bread', calories: 230 },
+    { id: 'bread2', name: '9-Grain Wheat Bread', calories: 210 },
+    { id: 'bread3', name: 'Artisan Flatbread', calories: 230 },
   ],
-  meatsProteins: [
-    { id: 1, name: 'BBQ Pulled Pork', calories: 200 },
-    { id: 2, name: 'BBQ Rib Patty', calories: 260 },
-    { id: 3, name: 'Buffalo Chicken Strips', calories: 90 },
+  meats: [
+    { id: 'meats1', name: 'BBQ Pulled Pork', calories: 200, url: 'https://www.subway.co.kr/images/menu/sandwich_pm08.jpg' },
+    { id: 'meats2', name: 'BBQ Rib Patty', calories: 260, url: 'https://www.subway.co.kr/images/menu/sandwich_pm01.jpg' },
+    { id: 'meats3', name: 'Buffalo Chicken Strips', calories: 90, url: 'https://www.subway.co.kr/images/menu/sandwich_pm10.jpg' },
   ],
   cheese: [
-    { id: 1, name: 'American Cheese', calories: 40 },
-    { id: 2, name: 'Cheddar Cheese', calories: 60 },
-    { id: 3, name: 'Feta Cheese', calories: 35 },
+    { id: 'cheese1', name: 'American Cheese', calories: 40 },
+    { id: 'cheese2', name: 'Cheddar Cheese', calories: 60 },
+    { id: 'cheese3', name: 'Feta Cheese', calories: 35 },
   ],
   veggies: [
-    { id: 1, name: 'Banana Peppers', calories: 0 },
-    { id: 2, name: 'Carrots', calories: 5 },
-    { id: 3, name: 'Cucumbers', calories: 0 },
+    { id: 'veggies1', name: 'Banana Peppers', calories: 0 },
+    { id: 'veggies2', name: 'Carrots', calories: 5 },
+    { id: 'veggies3', name: 'Cucumbers', calories: 0 },
   ],
   condiments: [
-    { id: 1, name: 'Barbecue Sauce', calories: 35 },
-    { id: 2, name: 'Buffalo Sauce', calories: 5 },
-    { id: 3, name: 'Chipotle Southwest Sauce', calories: 100 },
+    { id: 'condiments1', name: 'Barbecue Sauce', calories: 35 },
+    { id: 'condiments2', name: 'Buffalo Sauce', calories: 5 },
+    { id: 'condiments3', name: 'Chipotle Southwest Sauce', calories: 100 },
   ],
   extras: [
-    { id: 1, name: 'Avocado', calories: 60 },
-    { id: 2, name: 'Bacon', calories: 80 },
-    { id: 3, name: 'Guacamole', calories: 70 },
-    { id: 3, name: 'Pepperoni', calories: 80 },
+    { id: 'extras1', name: 'Avocado', calories: 60 },
+    { id: 'extras2', name: 'Bacon', calories: 80 },
+    { id: 'extras3', name: 'Guacamole', calories: 70 },
+    { id: 'extras4', name: 'Pepperoni', calories: 80 },
   ]
 };
 
@@ -39,38 +39,15 @@ const myFavorite = [
     id: 1,
     name: 'My Favorite 1',
     item: [
-      { id: 1, name: '9-Grain Honey Oat Bread', calories: 230 },
-      { id: 2, name: 'BBQ Pulled Pork', calories: 200 },
-      { id: 3, name: 'American Cheese', calories: 40 },
-      { id: 4, name: 'Banana Peppers', calories: 0 },
-      { id: 5, name: 'Barbecue Sauce', calories: 35 },
-      { id: 6, name: 'Avocado', calories: 60 },
+      { id: 'bread1', name: '9-Grain Honey Oat Bread', calories: 230, quantity: 1 },
+      { id: 'meats1', name: 'BBQ Pulled Pork', calories: 200, quantity: 2, url: 'https://www.subway.co.kr/images/menu/sandwich_pm08.jpg' },
+      { id: 'cheese1', name: 'American Cheese', calories: 40, quantity: 1 },
+      { id: 'veggies1', name: 'Banana Peppers', calories: 0, quantity: 1 },
+      { id: 'condiments1', name: 'Barbecue Sauce', calories: 35, quantity: 3 },
+      { id: 'extras1', name: 'Avocado', calories: 60, quantity: 1 },
     ],
+    calories: 565,
   },
-  {
-    id: 2,
-    name: 'My Favorite 2',
-    item: [
-      { id: 1, name: '9-Grain Honey Oat Bread', calories: 230 },
-      { id: 2, name: 'BBQ Pulled Pork', calories: 200 },
-      { id: 3, name: 'American Cheese', calories: 40 },
-      { id: 4, name: 'Banana Peppers', calories: 0 },
-      { id: 5, name: 'Barbecue Sauce', calories: 35 },
-      { id: 6, name: 'Avocado', calories: 60 },
-    ],
-  },
-  {
-    id: 3,
-    name: 'My Favorite 3',
-    item: [
-      { id: 1, name: '9-Grain Honey Oat Bread', calories: 230 },
-      { id: 2, name: 'BBQ Pulled Pork', calories: 200 },
-      { id: 3, name: 'American Cheese', calories: 40 },
-      { id: 4, name: 'Banana Peppers', calories: 0 },
-      { id: 5, name: 'Barbecue Sauce', calories: 35 },
-      { id: 6, name: 'Avocado', calories: 60 },
-    ],
-  }
 ];
 
 const app = express();
