@@ -6,10 +6,10 @@ import { resetTitle, generateName } from './generateName';
 
 
 chooseSectionMain();
-generateName();
 resetTitle();
 
 document.addEventListener('DOMContentLoaded', () => {
   renderMyFavorite();
   chooseSectionRender();
+  generateName();
 });

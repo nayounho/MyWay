@@ -30,6 +30,10 @@
   border: #ccc;
 }
 
+.title__input:focus {
+  outline: none;
+}
+
 .title:after {
   content: '';
   display: block;
