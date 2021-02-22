@@ -12,11 +12,13 @@ const getItem = async (item: string, btnType: string) => {
   $parentNode.innerHTML = items.map(({ id, name }: { id: string, name: string }) => `<li><input type="${btnType}" id="${id}" name="${item}"><label for="${id}">${name}</label></li>`).join('');
 }
 
-export default () => {
-  getItem('bread', 'radio');
-  getItem('meats', 'radio');
-  getItem('cheese', 'checkbox');
-  getItem('veggies', 'checkbox');
-  getItem('sauce', 'checkbox');
-  getItem('extras', 'checkbox');
+export default async () => {
+  await Promise.all([
+    getItem('bread', 'radio'),
+    getItem('meats', 'radio'),
+    getItem('cheese', 'checkbox'),
+    getItem('veggies', 'checkbox'),
+    getItem('sauce', 'checkbox'),
+    getItem('extras', 'checkbox'),
+  ])
 }
