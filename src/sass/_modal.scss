@@ -18,6 +18,8 @@
   display: none;
   font-size: .8rem;
   user-select: none;
+  position: absolute;
+  z-index: 100;
 
   div,
   li {
@@ -119,10 +121,6 @@
   &.open {
     @include select();
     display: block;
-  }
-
-  &.open + div {
-    display: none;
   }
 }
 
