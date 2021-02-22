@@ -6,13 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="./dist/bundle.js"></script>
+  <script src="https://kit.fontawesome.com/ae65bdc9f9.js" crossorigin="anonymous"></script>
   <title>Welcom to MyWay!</title>
 </head>
 
 <body>
   <header>
     <h1 class="head">
-      <img class="" src="#" alt="Myway logo" />
+      <img src="./img/myway_logo.png" alt="Myway logo" />
     </h1>
   </header>
   <main>
@@ -21,87 +22,123 @@
       <label for="titleInput"> <input type="text" id="titleInput" class="title__input" /></label>
     </section>
     <section class="main__calc"><span>0</span><span> kcal</span></section>
-    <section class="main__choose">
-      <h1 class="choose__head">메뉴 & 재료 선택하기</h1>
-      <ul class="choose__menu">
-        <li class="menu__size">사이즈
-          <div class="size__title">15cm</div>
-          <ul class="size__item">
-            <li><input type="radio" id="size1" name="1"><label for="size1">15cm</label></li>
-            <li><input type="radio" id="size2" name="1"><label for="size2">30cm</label></li>
-          </ul>
-        </li>
-        <li class="menu__bread">빵
-          <div class="bread__title">선택하세요</div>
-          <ul class="bread__item">
-            <!-- <li><input type="radio" id="bread1" name="1"><label for="bread1">곡물빵</label></li>
-              <li><input type="radio" id="bread2" name="1"><label for="bread2">플랫브래드</label></li> -->
-          </ul>
-        </li>
-        <li class="menu__meats">메뉴
-          <div class="meats__title">선택하세요</div>
-          <ul class="meats__item">
-            <!-- <li><input type="radio" id="meat1" name="2"><label for="meat1">햄</label></li>
-              <li><input type="radio" id="meat2" name="2"><label for="meat2">터키</label></li> -->
-          </ul>
-        </li>
-        <li class="menu__cheese">치즈
-          <div class="cheese__title">선택하세요</div>
-          <ul class="cheese__item">
-            <!-- <li><input type="checkbox" id="cheese1" name="3"><label for="cheese1">아메리칸 치즈</label></li>
-              <li><input type="checkbox" id="cheese2" name="3"><label for="cheese2">슈레드 치즈</label></li> -->
-          </ul>
-        </li>
-        <li class="menu__veggies">야채
-          <div class="veggies__title">선택하세요</div>
-          <ul class="veggies__item">
-            <!-- <li><input type="checkbox" id="veggies1" name="4"><label for="veggies1">양상추</label></li>
-              <li><input type="checkbox" id="veggies2" name="4"><label for="veggies2">토마토</label></li> -->
-          </ul>
-        </li>
-        <li class="menu__sauce">소스
-          <div class="sauce__title">선택하세요</div>
-          <ul class="sauce__item">
-            <!-- <li><input type="checkbox" id="sauce1" name="5"><label for="sauce1">랜치</label></li>
-              <li><input type="checkbox" id="sauce2" name="5"><label for="sauce2">스위트 어니언</label></li> -->
-          </ul>
-        </li>
-        <li class="menu__extra">추가 선택
-          <div class="extra_title">선택하세요</div>
-          <ul class="extra__item">
-            <!-- <li><input type="checkbox" id="extra1" name="6"><label for="extra1">더블미트</label></li>
-              <li><input type="checkbox" id="extra2" name="6"><label for="extra2">아보카도</label></li> -->
-          </ul>
-        </li>
-      </ul>
-    </section>
-    <section class="main__custom">
-      <h3 class="custom__heading">선택한 항목</h3>
-      <ul class="custom__list-static">
-        <li class="list-static__size">사이즈: <span>15cm</span></li>
-        <li class="list-static__bread">빵: <span></span></li>
-        <li class="list-static__menu">메뉴: <span></span></li>
-      </ul>
-      <ul class="custom__list-dynamic">
-        <!-- 동적 추가 예정 -->
-        <li class="list-dynamic__item">
-          <input type="number" id="cheese1" class="list-dynamic__num" value="1">
-          <label for="cheese1">아메리칸 치즈</label>
-          <button class="list-dynamic__del">×</button>
-        </li>
-        <li class="list-dynamic__item">
-          <input type="number" id="veggie1" class="list-dynamic__num" value="1">
-          <label for="veggie1">양상추</label>
-          <button class="list-dynamic__del">×</button>
-        </li>
-        <li class="list-dynamic__item">
-          <input type="number" id="veggie2" class="list-dynamic__num" value="1">
-          <label for="veggie2">토마토</label>
-          <button class="list-dynamic__del">×</button>
-        </li>
-        <!-- 동적 추가 예정 -->
-      </ul>
-    </section>
+    <div class="choose-custom-container">
+      <section class="main__choose">
+        <h1 class="choose__heading">메뉴 & 재료 선택하기</h1>
+        <ul class="choose__menu">
+          <li class="menu__size">
+            <span>사이즈</span>
+            <div class="modal open">
+              <div>15cm<i class="fas fa-sort-up"></i></div>
+              <ul class="size__item">
+                <li><input type="radio" id="size1" name="1"><label for="size1">15cm</label></li>
+                <li><input type="radio" id="size2" name="1"><label for="size2">30cm</label></li>
+              </ul>
+            </div>
+            <div class="size__title">15cm<i class="fas fa-sort-down"></i></div>
+          </li>
+          <li class="menu__bread">
+            <span>빵</span>
+            <div class="modal">
+              <div>선택하세요<i class="fas fa-sort-up"></i></div>
+              <ul class="bread__item">
+                <!--
+                <li><input type="radio" id="bread0" name="1"><label for="bread0">선택하세요</label></li>
+                <li><input type="radio" id="bread1" name="1"><label for="bread1">곡물빵</label></li>
+                <li><input type="radio" id="bread2" name="1"><label for="bread2">플랫브래드</label></li>
+                -->
+              </ul>
+            </div>
+            <div class="bread__title">선택하세요<i class="fas fa-sort-down"></i></div>
+          </li>
+          <li class="menu__meats">
+            <span>메뉴</span>
+            <div class="modal">
+              <div>선택하세요<i class="fas fa-sort-up"></i></div>
+              <ul class="meats__item">
+                <!--
+                <li><input type="radio" id="meat0" name="2"><label for="meat0">선택하세요</label></li>
+                <li><input type="radio" id="meat1" name="2"><label for="meat1">햄</label></li>
+                <li><input type="radio" id="meat2" name="2"><label for="meat2">터키</label></li>
+                -->
+              </ul>
+            </div>
+            <div class="meats__title">선택하세요<i class="fas fa-sort-down"></i></div>
+          </li>
+          <li class="menu__cheese">
+            <span>치즈</span>
+            <div class="modal open">
+              <div>선택하세요<i class="fas fa-sort-up"></i></div>
+              <ul class="cheese__item">
+                <li><input type="checkbox" id="cheese1" name="3"><label for="cheese1">아메리칸 치즈</label></li>
+                <li><input type="checkbox" id="cheese2" name="3"><label for="cheese2">슈레드 치즈</label></li>
+              </ul>
+            </div>
+            <div class="cheese__title">선택하세요<i class="fas fa-sort-down"></i></div>
+          </li>
+          <li class="menu__veggies">
+            <span>야채</span>
+            <div class="modal">
+              <div>선택하세요<i class="fas fa-sort-up"></i></div>
+              <ul class="veggies__item">
+                <!-- <li><input type="checkbox" id="veggies1" name="4"><label for="veggies1">양상추</label></li>
+                  <li><input type="checkbox" id="veggies2" name="4"><label for="veggies2">토마토</label></li> -->
+              </ul>
+            </div>
+            <div class="veggies__title">선택하세요<i class="fas fa-sort-down"></i></div>
+          </li>
+          <li class="menu__sauce">
+            <span>소스</span>
+            <div class="modal">
+              <div>선택하세요<i class="fas fa-sort-up"></i></div>
+              <ul class="sauce__item">
+                <!-- <li><input type="checkbox" id="sauce1" name="5"><label for="sauce1">랜치</label></li>
+                  <li><input type="checkbox" id="sauce2" name="5"><label for="sauce2">스위트 어니언</label></li> -->
+              </ul>
+            </div>
+            <div class="sauce__title">선택하세요<i class="fas fa-sort-down"></i></div>
+          </li>
+          <li class="menu__extra">
+            <span>추가 선택</span>
+            <div class="modal">
+              <div>선택하세요<i class="fas fa-sort-up"></i></div>
+              <ul class="extra__item">
+                <!-- <li><input type="checkbox" id="extra1" name="6"><label for="extra1">더블미트</label></li>
+                  <li><input type="checkbox" id="extra2" name="6"><label for="extra2">아보카도</label></li> -->
+              </ul>
+            </div>
+            <div class="extra__title">선택하세요<i class="fas fa-sort-down"></i></div>
+          </li>
+        </ul>
+      </section>
+      <section class="main__custom">
+        <h3 class="custom__heading">선택한 항목</h3>
+        <ul class="custom__list-static">
+          <li class="list-static__size">사이즈: <span>15cm</span></li>
+          <li class="list-static__bread">빵: <span></span></li>
+          <li class="list-static__menu">메뉴: <span></span></li>
+        </ul>
+        <ul class="custom__list-dynamic">
+          <!-- 동적 추가 예정 -->
+          <li class="list-dynamic__item">
+            <input type="number" id="cheese1" class="list-dynamic__num" value="1">
+            <label for="cheese1">아메리칸 치즈</label>
+            <button class="list-dynamic__del"><i class="fas fa-times-circle"></i></button>
+          </li>
+          <li class="list-dynamic__item">
+            <input type="number" id="veggie1" class="list-dynamic__num" value="1">
+            <label for="veggie1">양상추</label>
+            <button class="list-dynamic__del"><i class="fas fa-times-circle"></i></button>
+          </li>
+          <li class="list-dynamic__item">
+            <input type="number" id="veggie2" class="list-dynamic__num" value="1">
+            <label for="veggie2">토마토</label>
+            <button class="list-dynamic__del"><i class="fas fa-times-circle"></i></button>
+          </li>
+          <!-- 동적 추가 예정 -->
+        </ul>
+      </section>
+    </div>
     <button class="myway-btn" style="background-color: aquamarine">MY WAY</button>
     <section class="main__myway">
       <ul class="myway__list">
@@ -115,11 +152,13 @@
     </section>
   </main>
   <footer><a href="https://github.com/nayounho/MyWay.git">
-    <img src="#" alt="team logo" />
-  </a>
-  <a href="https://github.com/ahnanne">@ahnanne</a>
-  <a href="https://github.com/nayounho">@nayounho</a>
-  <a href="https://github.com/bg-shorthand">@bg-shorthand</a>
+      <img src="./img/whatsub_logo.png" alt="team logo" />
+    </a>
+    <div class="about-us">
+      <a href="https://github.com/ahnanne">@ahnanne</a>
+      <a href="https://github.com/nayounho">@nayounho</a>
+      <a href="https://github.com/bg-shorthand">@bg-shorthand</a>
+    </div>
   </footer>
 </body>
 

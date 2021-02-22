@@ -2,22 +2,48 @@
 
 @mixin mainBox {
   width: 300px;
-  box-shadow: 5px 5px $grey;
   border-radius: 5px;
+  box-shadow: 5px 5px 5px $grey-for-shadow;
+  background-color: $white;
+}
+@mixin mainBoxHead {
+  background-color: $yellow;
+  color: $white;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: $heading-font-size;
+  font-weight: 400;
 }
 
-main {
-  width: 762px;
-  margin: 0 auto;
-}
 .main__choose {
   @include mainBox();
-  margin: 26px;
+  
+  .choose__heading {
+    @include mainBoxHead();
+  }
+}
 
-  .choose__head {
-    height: 40px;
-    padding-left: 10px;
-    background-color: $yellow;
-    border-radius: 5px 5px 0 0;
+.choose__menu {
+  padding: 17px 20px;
+  font-size: $content-font-size;
+
+  li {
+    margin-top: 12px;
+    
+    span {
+      display: block;
+      font-weight: 400;
+      margin: 12px 0;
+      font-weight: 700;
+    }
+    span:first-child {
+      margin-top: 0;
+    }
+  }
+  li:first-child {
+    margin-top: 0;
   }
 }
