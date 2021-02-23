@@ -1,5 +1,6 @@
 import chooseSectionRender from './chooseSection/chooseSectionRender';
 import chooseSectionMain from './chooseSection/chooseSectionMain';
+import { getMenu } from './state/menuState';
 import renderMyFavorite from './mywaySection/renderMyFavorite';
 import { resetTitle, generateName } from './titleSection/generateName';
 
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }),
     renderMyFavorite(),
     chooseSectionRender(),
+    getMenu(),
   ]);
   $spinnerContainer.style.display = 'none';
 });
