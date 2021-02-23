@@ -45,6 +45,25 @@
 .custom__list-dynamic {
   padding: 17px 20px;
 
+  .fa-grin {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    font-size: 100px;
+    color: $grey-for-shadow;
+  }
+
+  .fa-grin ~ span {
+    user-select: none;
+    display: inline-block;
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+    font-style: italic;
+    font-weight: 700;
+    color: $grey-for-shadow;
+  }
+
   .list-dynamic__item {
     position: relative;
     margin-top: 14px;

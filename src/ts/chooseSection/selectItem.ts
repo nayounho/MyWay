@@ -27,6 +27,9 @@ const renderCheckedItem = () => {
   <button class="list-dynamic__del"><i class="fas fa-times-circle"></i></button>
 </li>`;
   });
+
+  if (!$checkedItemList.firstElementChild) $checkedItemList.innerHTML = `<i class="far fa-grin"></i>
+  <span>What's your way?</span>`;
 };
 
 const makeSelectedItem = () => {
@@ -52,7 +55,6 @@ const makeSelectedItem = () => {
       state.selectedItem = [...state.selectedItem.filter(item => item.id.replace(/[0-9]+/, '') !== categoryName), ...category.filter(item => item.id === masterItem.id)];
       // state.selectedItem = state.selectedItem.map(item => ({ ...item, quantity: 1 }));
       state.selectedItem = state.selectedItem.map(item => {
-        console.log(item.name, item.hasOwnProperty('quantity'));
         return item.hasOwnProperty('quantity') ? item : { ...item, quantity: 1 };
       })
 
@@ -94,8 +96,6 @@ const makeSelectedItem = () => {
     state.selectedItem = state.selectedItem.map(item => {
       return item.id === target.id ? { ...item, quantity: +target.value } : item;
     });
-
-    console.log(state.selectedItem);
   });
 };
 
