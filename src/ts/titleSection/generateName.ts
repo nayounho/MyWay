@@ -11,16 +11,16 @@ const generateName = async () => {
 };
 
 const resetTitle = () => {
-  const $inputTitle = document.querySelector('.title__input') as HTMLInputElement;
+  // const $inputTitle = document.querySelector('.title__input') as HTMLInputElement;
   
-  $inputTitle.addEventListener('click', () => {
+  $titleInput.addEventListener('click', () => {
     
-    $inputTitle.value = '';
+    $titleInput.value = '';
   });
 
-  $inputTitle.addEventListener('focusout', () => {
-    if ($inputTitle.value === '') {
-     $inputTitle.value = initalInputValue;
+  $titleInput.addEventListener('focusout', () => {
+    if ($titleInput.value === '') {
+     $titleInput.value = initalInputValue;
     }
   });
 };
