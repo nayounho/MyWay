@@ -3,9 +3,12 @@ import chooseSectionMain from './chooseSection/chooseSectionMain';
 import { getMenu } from './state/menuState';
 import renderMyFavorite from './mywaySection/renderMyFavorite';
 import { resetTitle, generateName } from './titleSection/generateName';
+import sumCalorie from './sumCalorie/sumCalorie';
+
 
 chooseSectionMain();
 resetTitle();
+sumCalorie();
 
 document.addEventListener('DOMContentLoaded', async () => {
   const $spinnerContainer = document.querySelector('.spinner-container') as HTMLElement;
@@ -21,3 +24,4 @@ document.addEventListener('DOMContentLoaded', async () => {
   ]);
   $spinnerContainer.style.display = 'none';
 });
+  
