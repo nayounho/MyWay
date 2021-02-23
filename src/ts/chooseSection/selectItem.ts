@@ -27,8 +27,6 @@ const makeSelectedItem = () => {
     }
 
     state.selectedItem = state.selectedItem.map(item => ({ ...item, quantity: 1 }))
-
-    console.log(state.selectedItem);
   })
 }
 
