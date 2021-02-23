@@ -15,6 +15,20 @@ const $mainChoose = document.querySelector('.main__choose') as HTMLElement;
 const $sizeList = document.querySelector('.size__item') as HTMLUListElement;
 const $checkedItemList = document.querySelector('.custom__list-dynamic') as HTMLUListElement;
 
+const renderCheckedItem = () => {
+  $checkedItemList.innerHTML = '';
+
+  state.selectedItem.forEach((item: Category) => {
+    if (item.id.includes('bread') || item.id.includes('meats')) return;
+
+    $checkedItemList.innerHTML += `<li class="list-dynamic__item">
+  <input type="number" id="${item.id}" class="list-dynamic__num" value="1" />
+  <label for="${item.id}">${item.name}</label>
+  <button class="list-dynamic__del"><i class="fas fa-times-circle"></i></button>
+</li>`;
+  });
+};
+
 const makeSelectedItem = () => {
   $mainChoose.addEventListener('change', e => {
     const target = e.target as HTMLInputElement;
@@ -31,19 +45,7 @@ const makeSelectedItem = () => {
 
       state.selectedItem = state.selectedItem.map(item => ({ ...item, quantity: 1 }));
 
-      const renderCheckedItem = (() => {
-        $checkedItemList.innerHTML = '';
-      
-        state.selectedItem.forEach((item: Category) => {
-          $checkedItemList.innerHTML += `<li class="list-dynamic__item">
-        <input type="number" id="${item.id}" class="list-dynamic__num" value="${item.quantity}" />
-        <label for="${item.id}">${item.name}</label>
-        <button class="list-dynamic__del"><i class="fas fa-times-circle"></i></button>
-      </li>`;
-        });
-      })();
-
-      console.log(state.selectedItem);
+      renderCheckedItem();
     } else if (target.type === 'radio') {
       state.selectedItem = [...state.selectedItem.filter(item => item.id.replace(/[0-9]+/, '') !== categoryName), ...category.filter(item => item.id === masterItem.id)];
       state.selectedItem = state.selectedItem.map(item => ({ ...item, quantity: 1 }));
