@@ -31,21 +31,19 @@ const makeSelectedItem = () => {
 
       state.selectedItem = state.selectedItem.map(item => ({ ...item, quantity: 1 }));
 
-      const renderCheckedItem = () => {
-        let itemName = '';
-
-        category.find((item: Category) => {
-          if (item.id === target.id) itemName = item.name;
-        });
-
-        $checkedItemList.innerHTML += `<li class="list-dynamic__item">
-        <input type="number" id="${target.id}" class="list-dynamic__num" value="1" />
-        <label for="${target.id}">${itemName}</label>
+      const renderCheckedItem = (() => {
+        $checkedItemList.innerHTML = '';
+      
+        state.selectedItem.forEach((item: Category) => {
+          $checkedItemList.innerHTML += `<li class="list-dynamic__item">
+        <input type="number" id="${item.id}" class="list-dynamic__num" value="${item.quantity}" />
+        <label for="${item.id}">${item.name}</label>
         <button class="list-dynamic__del"><i class="fas fa-times-circle"></i></button>
       </li>`;
-      };
+        });
+      })();
 
-      renderCheckedItem();
+      console.log(state.selectedItem);
     } else if (target.type === 'radio') {
       state.selectedItem = [...state.selectedItem.filter(item => item.id.replace(/[0-9]+/, '') !== categoryName), ...category.filter(item => item.id === masterItem.id)];
       state.selectedItem = state.selectedItem.map(item => ({ ...item, quantity: 1 }));
@@ -54,7 +52,7 @@ const makeSelectedItem = () => {
         const $node = document.querySelector(`.list-static__${categoryName} > span`) as HTMLElement;
         let html = '';
 
-        category.find((item: Category) => {
+        category.forEach((item: Category) => {
           if (item.id === target.id) html = item.name;
         });
 
