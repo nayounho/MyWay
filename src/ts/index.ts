@@ -1,7 +1,7 @@
 import chooseSectionRender from './chooseSection/chooseSectionRender';
 import chooseSectionMain from './chooseSection/chooseSectionMain';
-import renderMyFavorite from './renderMyFavorite';
-import { resetTitle, generateName } from './generateName';
+import renderMyFavorite from './mywaySection/renderMyFavorite';
+import { resetTitle, generateName } from './titleSection/generateName';
 
 chooseSectionMain();
 resetTitle();
