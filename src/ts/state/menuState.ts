@@ -14,7 +14,8 @@ type MenuState = {
   cheese: Category[],
   veggies: Category[],
   sauce: Category[],
-  extras: Category[]
+  extras: Category[],
+  [proName: string]: any
 };
 
 let menuState: MenuState = {
