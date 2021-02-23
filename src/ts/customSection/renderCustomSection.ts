@@ -1,5 +1,5 @@
 import { menuState } from '../state/menuState';
-import sizeState from '../state/sizeState';
+import state from '../state/state';
 
 const renderCustom = async () => {
   const $sizeList = document.querySelector('.size__item') as HTMLUListElement;
@@ -8,12 +8,12 @@ const renderCustom = async () => {
   // size
   $sizeList.addEventListener('click', e => {
     if ((<HTMLElement>e.target).matches('#size1')) {
-      sizeState.name = '15cm';
-      sizeState.size = 15;
+      state.sizeState.name = '15cm';
+      state.sizeState.size = 1;
     }
     else if ((<HTMLElement>e.target).matches('#size2')) {
-      sizeState.name = '30cm';
-      sizeState.size = 30;
+      state.sizeState.name = '30cm';
+      state.sizeState.size = 2;
     } else return;
   });
 };
