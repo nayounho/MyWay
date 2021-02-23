@@ -21,6 +21,6 @@ export default () => {
     openModal('cheese'),
     openModal('veggies'),
     openModal('sauce'),
-    openModal('extra'),
+    openModal('extras'),
   ])
 }
