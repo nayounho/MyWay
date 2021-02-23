@@ -1,5 +1,6 @@
 import { menuState } from '../state/menuState';
 import state from '../state/state';
+import sumCalorie from '../sumCalorie/sumCalorie';
 
 type Category = {
   id: string,
@@ -28,6 +29,8 @@ const makeSelectedItem = () => {
     }
 
     state.selectedItem = state.selectedItem.map(item => ({ ...item, quantity: 1 }))
+
+    sumCalorie();
   })
 }
 
