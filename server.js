@@ -2,35 +2,35 @@ const express = require('express');
 
 const menu = {
   bread: [
-    { id: 'bread1', name: '9-Grain Honey Oat Bread', calories: 230 },
-    { id: 'bread2', name: '9-Grain Wheat Bread', calories: 210 },
-    { id: 'bread3', name: 'Artisan Flatbread', calories: 230 },
+    { id: 'bread1', name: '9-Grain Honey Oat Bread', calories: 230, selected: false },
+    { id: 'bread2', name: '9-Grain Wheat Bread', calories: 210, selected: false },
+    { id: 'bread3', name: 'Artisan Flatbread', calories: 230, selected: false },
   ],
   meats: [
-    { id: 'meats1', name: 'BBQ Pulled Pork', calories: 200, url: 'https://www.subway.co.kr/images/menu/sandwich_pm08.jpg' },
-    { id: 'meats2', name: 'BBQ Rib Patty', calories: 260, url: 'https://www.subway.co.kr/images/menu/sandwich_pm01.jpg' },
-    { id: 'meats3', name: 'Buffalo Chicken Strips', calories: 90, url: 'https://www.subway.co.kr/images/menu/sandwich_pm10.jpg' },
+    { id: 'meats1', name: 'BBQ Pulled Pork', calories: 200, url: 'https://www.subway.co.kr/images/menu/sandwich_pm08.jpg', selected: false },
+    { id: 'meats2', name: 'BBQ Rib Patty', calories: 260, url: 'https://www.subway.co.kr/images/menu/sandwich_pm01.jpg', selected: false },
+    { id: 'meats3', name: 'Buffalo Chicken Strips', calories: 90, url: 'https://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false },
   ],
   cheese: [
-    { id: 'cheese1', name: 'American Cheese', calories: 40 },
-    { id: 'cheese2', name: 'Cheddar Cheese', calories: 60 },
-    { id: 'cheese3', name: 'Feta Cheese', calories: 35 },
+    { id: 'cheese1', name: 'American Cheese', calories: 40, selected: false },
+    { id: 'cheese2', name: 'Cheddar Cheese', calories: 60, selected: false },
+    { id: 'cheese3', name: 'Feta Cheese', calories: 35, selected: false },
   ],
   veggies: [
-    { id: 'veggies1', name: 'Banana Peppers', calories: 0 },
-    { id: 'veggies2', name: 'Carrots', calories: 5 },
-    { id: 'veggies3', name: 'Cucumbers', calories: 0 },
+    { id: 'veggies1', name: 'Banana Peppers', calories: 0, selected: false },
+    { id: 'veggies2', name: 'Carrots', calories: 5, selected: false },
+    { id: 'veggies3', name: 'Cucumbers', calories: 0, selected: false },
   ],
   sauce: [
-    { id: 'condiments1', name: 'Barbecue Sauce', calories: 35 },
-    { id: 'condiments2', name: 'Buffalo Sauce', calories: 5 },
-    { id: 'condiments3', name: 'Chipotle Southwest Sauce', calories: 100 },
+    { id: 'condiments1', name: 'Barbecue Sauce', calories: 35, selected: false },
+    { id: 'condiments2', name: 'Buffalo Sauce', calories: 5, selected: false },
+    { id: 'condiments3', name: 'Chipotle Southwest Sauce', calories: 100, selected: false },
   ],
   extras: [
-    { id: 'extras1', name: 'Avocado', calories: 60 },
-    { id: 'extras2', name: 'Bacon', calories: 80 },
-    { id: 'extras3', name: 'Guacamole', calories: 70 },
-    { id: 'extras4', name: 'Pepperoni', calories: 80 },
+    { id: 'extras1', name: 'Avocado', calories: 60, selected: false },
+    { id: 'extras2', name: 'Bacon', calories: 80, selected: false },
+    { id: 'extras3', name: 'Guacamole', calories: 70, selected: false },
+    { id: 'extras4', name: 'Pepperoni', calories: 80, selected: false },
   ]
 };
 
