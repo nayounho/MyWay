@@ -22,9 +22,9 @@ const menu = {
     { id: 'veggies3', name: 'Cucumbers', calories: 0, selected: false },
   ],
   sauce: [
-    { id: 'condiments1', name: 'Barbecue Sauce', calories: 35, selected: false },
-    { id: 'condiments2', name: 'Buffalo Sauce', calories: 5, selected: false },
-    { id: 'condiments3', name: 'Chipotle Southwest Sauce', calories: 100, selected: false },
+    { id: 'sauce1', name: 'Barbecue Sauce', calories: 35, selected: false },
+    { id: 'sauce2', name: 'Buffalo Sauce', calories: 5, selected: false },
+    { id: 'sauce3', name: 'Chipotle Southwest Sauce', calories: 100, selected: false },
   ],
   extras: [
     { id: 'extras1', name: 'Avocado', calories: 60, selected: false },
