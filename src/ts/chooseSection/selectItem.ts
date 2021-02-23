@@ -13,6 +13,7 @@ const $mainChoose = document.querySelector('.main__choose') as HTMLElement;
 const makeSelectedItem = () => {
   $mainChoose.addEventListener('change', e => {
     const target = e.target as HTMLInputElement;
+    if (target.matches('#size1') || target.matches('#size2')) return;
     
     const categoryName = target.id.replace(/[0-9]+/, '');
     const category: Category[] = menuState[categoryName];
