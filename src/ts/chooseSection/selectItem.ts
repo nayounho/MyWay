@@ -1,7 +1,6 @@
 import { menuState } from '../state/menuState';
 import state from '../state/state';
 import renderSizeInfo from '../customSection/renderSizeInfo';
-import render from '../mywaySection/renderMyFavorite';
 import sumCalorie from '../sumCalorie/sumCalorie';
 import selectModalTitle from './selectModalTitle';
 
@@ -14,6 +13,7 @@ type Category = {
 
 const $mainChoose = document.querySelector('.main__choose') as HTMLElement;
 const $sizeList = document.querySelector('.size__item') as HTMLUListElement;
+const $checkedItemList = document.querySelector('.custom__list-dynamic') as HTMLUListElement;
 
 const makeSelectedItem = () => {
   $mainChoose.addEventListener('change', e => {
@@ -23,13 +23,29 @@ const makeSelectedItem = () => {
     const categoryName = target.id.replace(/[0-9]+/, '');
     const category: Category[] = menuState[categoryName];
     const masterItem: Category = category.filter(item => item.id === target.id)[0];
-    const $radioTypeInfo = document.querySelector(`.list-static__${categoryName} > span`) as HTMLElement;
 
     if (target.type === 'checkbox') {
       state.selectedItem = target.checked
         ? [...state.selectedItem, masterItem]
         : state.selectedItem.filter(item => item.id !== masterItem.id);
+
       state.selectedItem = state.selectedItem.map(item => ({ ...item, quantity: 1 }));
+
+      const renderCheckedItem = () => {
+        let itemName = '';
+
+        category.find((item: Category) => {
+          if (item.id === target.id) itemName = item.name;
+        });
+
+        $checkedItemList.innerHTML += `<li class="list-dynamic__item">
+        <input type="number" id="${target.id}" class="list-dynamic__num" value="1" />
+        <label for="${target.id}">${itemName}</label>
+        <button class="list-dynamic__del"><i class="fas fa-times-circle"></i></button>
+      </li>`;
+      };
+
+      renderCheckedItem();
     } else if (target.type === 'radio') {
       state.selectedItem = [...state.selectedItem.filter(item => item.id.replace(/[0-9]+/, '') !== categoryName), ...category.filter(item => item.id === masterItem.id)];
       state.selectedItem = state.selectedItem.map(item => ({ ...item, quantity: 1 }));
@@ -38,7 +54,7 @@ const makeSelectedItem = () => {
         const $node = document.querySelector(`.list-static__${categoryName} > span`) as HTMLElement;
         let html = '';
 
-        menuState[categoryName].find((item: Category) => {
+        category.find((item: Category) => {
           if (item.id === target.id) html = item.name;
         });
 
