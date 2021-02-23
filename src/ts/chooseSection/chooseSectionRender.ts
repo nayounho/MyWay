@@ -1,10 +1,6 @@
 const axios = require('axios');
 const url = 'http://localhost:7000';
 
-const getMenu = async () => {
-  const { data: menu } = axios.get(url + '/menu')
-}
-
 const getItem = async (item: string, btnType: string) => {
   const { data: items } = await axios.get(url + `/menu.${item}`);
   const $parentNode = document.querySelector(`.${item}__item`) as HTMLUListElement;

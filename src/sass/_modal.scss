@@ -13,6 +13,11 @@
   height: 16px;
   color: $grey;
 }
+@mixin hideOverText {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 .modal {
   display: none;
@@ -24,6 +29,7 @@
   div,
   li {
     padding: 8px 5px;
+    @include hideOverText;
   }
 
   div {
@@ -126,6 +132,7 @@
 
 .choose__menu div[class$="__title"] {
   @include select();
+  @include hideOverText();
   padding: 8px 5px;
   position: relative;
   font-size: .8rem;

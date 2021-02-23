@@ -10,7 +10,9 @@
   </head>
 
   <body>
-    <div class="spinner-container"><img class="spinner" src="./img/spiner.svg" alt="loading..."></div>
+    <div class="spinner-container">
+      <img class="spinner" src="./img/spiner.svg" alt="loading..." />
+    </div>
     <header>
       <h1 class="head">
         <img src="./img/myway_logo.png" alt="Myway logo" />
@@ -23,9 +25,10 @@
       <div class="title-container">
         <section class="title">
           <label for="titleInput">
-            <input type="text" id="titleInput" class="title__input" /></label>
+            <input type="text" id="titleInput" class="title__input"
+          /></label>
         </section>
-        <section class="main__calc"><span>0</span><span> kcal</span></section>
+        <section class="main__calc"><span class="calc__number">0</span><span> kcal</span></section>
       </div>
       <div class="choose-custom-container">
         <section class="main__choose">
@@ -113,7 +116,7 @@
               </div>
               <div class="sauce__title">선택하세요<i class="fas fa-sort-down"></i></div>
             </li>
-            <li class="menu__extra">
+            <li class="menu__extras">
               <span>추가 선택</span>
               <div class="modal">
                 <div>선택하세요<i class="fas fa-sort-up"></i></div>
@@ -122,7 +125,7 @@
                   <li><input type="checkbox" id="extra2" name="6"><label for="extra2">아보카도</label></li> -->
                 </ul>
               </div>
-              <div class="extra__title">선택하세요<i class="fas fa-sort-down"></i></div>
+              <div class="extras__title">선택하세요<i class="fas fa-sort-down"></i></div>
             </li>
           </ul>
         </section>
@@ -131,10 +134,10 @@
           <ul class="custom__list-static">
             <li class="list-static__size">사이즈: <span>15cm</span></li>
             <li class="list-static__bread">빵: <span></span></li>
-            <li class="list-static__menu">메뉴: <span></span></li>
+            <li class="list-static__meats">메뉴: <span></span></li>
           </ul>
           <ul class="custom__list-dynamic">
-            <!-- 동적 추가 예정 -->
+            <!--
             <li class="list-dynamic__item">
               <input type="number" id="cheese1" class="list-dynamic__num" value="1" />
               <label for="cheese1">아메리칸 치즈</label>
@@ -150,7 +153,7 @@
               <label for="veggie2">토마토</label>
               <button class="list-dynamic__del"><i class="fas fa-times-circle"></i></button>
             </li>
-            <!-- 동적 추가 예정 -->
+            -->
           </ul>
         </section>
       </div>
