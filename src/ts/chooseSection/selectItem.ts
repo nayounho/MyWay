@@ -78,6 +78,12 @@ const makeSelectedItem = () => {
 
     renderSizeInfo();
   });
+
+  // 🎃 input:number의 수량 조정할 경우 state 갱신
+  $checkedItemList.addEventListener('change', e => {
+    const target = e.target as HTMLInputElement;
+    console.log(target.value);
+  });
 };
 
 export default makeSelectedItem;
