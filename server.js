@@ -121,7 +121,8 @@ app.post('/myFavorite', (req, res) => {
 app.patch('/myFavorite/:id', (req, res) => {
   const id = +req.params.id;
   const modifyMyFavorite = req.body;
-  const _myFavorite = myFavorite.map(item => item.id === id ? { ...item, ...modifyMyFavorite } : item);
+  const _myFavorite = myFavorite.map(item => (item.id === id
+    ? { ...item, ...modifyMyFavorite } : item));
   res.send(_myFavorite);
 });
 
@@ -129,4 +130,4 @@ app.delete('/myFavorite/:id', (req, res) => {
   const id = +req.params.id;
   const _myFavorite = myFavorite.filter(diary => diary.id !== id);
   res.send(_myFavorite);
-})
+});
