@@ -14,11 +14,13 @@ const openModal = (menu: string) => {
 }
 
 export default () => {
-  openModal('size');
-  openModal('bread');
-  openModal('meats');
-  openModal('cheese');
-  openModal('veggies');
-  openModal('sauce');
-  openModal('extra');
+  Promise.all([
+    openModal('size'),
+    openModal('bread'),
+    openModal('meats'),
+    openModal('cheese'),
+    openModal('veggies'),
+    openModal('sauce'),
+    openModal('extra'),
+  ])
 }
