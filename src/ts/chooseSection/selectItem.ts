@@ -2,6 +2,7 @@ import { menuState } from '../state/menuState';
 import state from '../state/state';
 import renderSizeInfo from '../customSection/renderSizeInfo';
 import render from '../mywaySection/renderMyFavorite';
+import selectModalTitle from './selectModalTitle';
 
 type Category = {
   id: string,
@@ -45,6 +46,8 @@ const makeSelectedItem = () => {
 
       renderSelectedItem();
     }
+
+    selectModalTitle(target);
   });
 
   // 사이즈 항목 선택 시 size state 갱신
