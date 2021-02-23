@@ -3,7 +3,6 @@ import chooseSectionMain from './chooseSection/chooseSectionMain';
 import { getMenu } from './state/menuState';
 import renderMyFavorite from './mywaySection/renderMyFavorite';
 import { resetTitle, generateName } from './titleSection/generateName';
-import renderCustom from './customSection/renderCustomSection';
 
 chooseSectionMain();
 resetTitle();
@@ -22,5 +21,3 @@ document.addEventListener('DOMContentLoaded', async () => {
   ]);
   $spinnerContainer.style.display = 'none';
 });
-
-renderCustom();
