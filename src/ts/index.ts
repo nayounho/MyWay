@@ -8,7 +8,6 @@ import renderCustom from './customSection/renderCustomSection';
 
 chooseSectionMain();
 resetTitle();
-sumCalorie();
 
 document.addEventListener('DOMContentLoaded', async () => {
   const $spinnerContainer = document.querySelector('.spinner-container') as HTMLElement;

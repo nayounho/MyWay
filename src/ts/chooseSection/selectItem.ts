@@ -2,6 +2,7 @@ import { menuState } from '../state/menuState';
 import state from '../state/state';
 import renderSizeInfo from '../customSection/renderSizeInfo';
 import render from '../mywaySection/renderMyFavorite';
+import sumCalorie from '../sumCalorie/sumCalorie';
 import selectModalTitle from './selectModalTitle';
 
 type Category = {
@@ -47,6 +48,7 @@ const makeSelectedItem = () => {
       renderSelectedItem();
     }
 
+    sumCalorie();
     selectModalTitle(target);
   });
 
