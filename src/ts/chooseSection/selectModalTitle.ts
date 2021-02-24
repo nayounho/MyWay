@@ -6,6 +6,6 @@ export default (target: HTMLInputElement) => {
   const $targetNameTitle = document.querySelector(`.${target.name}__title`) as HTMLDivElement;
   const $targetNameModalTitle = document.querySelector(`.menu__${target.name} > .modal > div`) as HTMLDivElement;
 
-  $targetNameTitle.textContent = name;
-  $targetNameModalTitle.textContent = name;
+  $targetNameTitle.textContent = name === '' ? '선택하세요' : name;
+  $targetNameModalTitle.textContent = name === '' ? '선택하세요' : name;
 }
