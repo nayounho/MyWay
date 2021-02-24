@@ -9,8 +9,9 @@
 @mixin animation-mixin($name) {
   @keyframes #{$name} {
     0% { opacity: 0; }
-    20% { opacity: .7; }
-    100% { opacity: .9; }
+    20% { opacity: .5; }
+    70% { opacity: 1; }
+    100% { opacity: 1; }
   }
 }
 
