@@ -112,6 +112,14 @@
     position: relative;
     margin-top: 14px;
     display: flex;
+    flex-flow: row nowrap;
+
+    label {
+      font-size: $content-font-size;
+      line-height: 26px;
+      flex-basis: 190px;
+      word-break: break-all;
+    }
   }
 
   .list-dynamic__item:first-child {
@@ -125,11 +133,6 @@
     border: 1px solid $grey;
     text-align: center;
     flex-shrink: 0;
-  }
-
-  label {
-    font-size: $content-font-size;
-    line-height: 26px;
   }
 
   .list-dynamic__del {
