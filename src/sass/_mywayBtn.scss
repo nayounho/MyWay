@@ -4,7 +4,8 @@
   height: 57px;
   font-size: 30px;
   margin: 0 auto;
-  background-color: $yellow;
+  // background: rgb(250,251,249);
+  background: linear-gradient(90deg, rgba(252,252,252,1) 0%, rgba(249,209,66,1) 35%, rgba(65,221,79,1) 100%);
   border-radius: 10px;
   border: $white;
   color: $white;
