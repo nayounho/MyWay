@@ -1,10 +1,4 @@
-type Category = {
-  id: string,
-  name: string,
-  calories: number,
-  selected: boolean,
-  quantity: number,
-}
+import type { Category } from './types';
 
 const state: { sizeState: { name: string, size: number }, selectedItem: Category[]} = {
   sizeState: { name: '15cm', size: 1 },

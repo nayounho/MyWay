@@ -13,7 +13,6 @@ const getItem = async (item: string, btnType: string) => {
 }
 
 export default async () => {
-  console.log('init');
   await Promise.all([
     getItem('bread', 'radio'),
     getItem('meats', 'radio'),
