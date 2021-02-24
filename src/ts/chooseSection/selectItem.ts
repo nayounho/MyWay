@@ -9,7 +9,7 @@ type Category = {
   name: string,
   calories: number,
   selected: boolean,
-  quantity?: number,
+  quantity: number,
 }
 
 const $mainChoose = document.querySelector('.main__choose') as HTMLElement;
@@ -19,11 +19,11 @@ const $checkedItemList = document.querySelector('.custom__list-dynamic') as HTML
 const renderCheckedItem = () => {
   $checkedItemList.innerHTML = '';
 
-  state.selectedItem.forEach((item: Category) => {
+  state.selectedItem.forEach((item) => {
     if (item.id.includes('bread') || item.id.includes('meats')) return;
 
     $checkedItemList.innerHTML += `<li class="list-dynamic__item">
-  <input type="number" id="${item.id}" class="list-dynamic__num" value="${item.quantity}" />
+  <input type="number" id="${item.id}" class="list-dynamic__num" value="${item.quantity}" min="1" max="10" />
   <label for="${item.id}">${item.name}</label>
   <button class="list-dynamic__del"><i class="fas fa-times-circle"></i></button>
 </li>`;
@@ -88,15 +88,32 @@ const makeSelectedItem = () => {
     }
 
     renderSizeInfo();
+
+    sumCalorie();
   });
 
   // 🎃 input:number의 수량 조정할 경우 state 갱신
   $checkedItemList.addEventListener('change', e => {
     const target = e.target as HTMLInputElement;
 
+    // limit quantity
+    if (+target.value <= 0 || +target.value > 10) {
+      target.value = '1';
+
+      const $popUp = document.querySelector('.custom__alertPopup') as HTMLElement;
+
+      $popUp.classList.add('active');
+      $popUp.addEventListener('animationend', () => {
+        $popUp.classList.remove('active');
+      });
+
+      return;
+    }
+
     state.selectedItem = state.selectedItem.map(item => {
       return item.id === target.id ? { ...item, quantity: +target.value } : item;
     });
+    sumCalorie();
   });
 };
 
