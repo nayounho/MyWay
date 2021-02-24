@@ -99,7 +99,14 @@ const makeSelectedItem = () => {
     // limit quantity
     if (+$input.value <= 0 || +$input.value > 10) {
       $input.value = '1';
-      console.log('1부터 10까지의 숫자를 입력해주세요.');
+
+      const $popUp = document.querySelector('.custom__alertPopup') as HTMLElement;
+
+      $popUp.classList.add('active');
+      $popUp.addEventListener('animationend', () => {
+        $popUp.classList.remove('active');
+      });
+
       return;
     }
 
@@ -108,10 +115,5 @@ const makeSelectedItem = () => {
     });
   });
 };
-
-// limit quantity(이벤트 위임)
-// $input.addEventListener('focusout', e => {
-//   console.log('hi');
-// });
 
 export default makeSelectedItem;
