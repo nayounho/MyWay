@@ -8,7 +8,8 @@ type Category = {
   id: string,
   name: string,
   calories: number,
-  selected: boolean
+  selected: boolean,
+  quantity?: number,
 }
 
 const $mainChoose = document.querySelector('.main__choose') as HTMLElement;
