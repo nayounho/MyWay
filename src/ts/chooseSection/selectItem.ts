@@ -9,7 +9,7 @@ type Category = {
   name: string,
   calories: number,
   selected: boolean,
-  quantity?: number,
+  quantity: number,
 }
 
 const $mainChoose = document.querySelector('.main__choose') as HTMLElement;
@@ -19,7 +19,7 @@ const $checkedItemList = document.querySelector('.custom__list-dynamic') as HTML
 const renderCheckedItem = () => {
   $checkedItemList.innerHTML = '';
 
-  state.selectedItem.forEach((item: Category) => {
+  state.selectedItem.forEach((item) => {
     if (item.id.includes('bread') || item.id.includes('meats')) return;
 
     $checkedItemList.innerHTML += `<li class="list-dynamic__item">
@@ -88,7 +88,8 @@ const makeSelectedItem = () => {
     }
 
     renderSizeInfo();
-    console.log(state);
+
+    sumCalorie();
   });
 
   // 🎃 input:number의 수량 조정할 경우 state 갱신
@@ -112,6 +113,7 @@ const makeSelectedItem = () => {
     state.selectedItem = state.selectedItem.map(item => {
       return item.id === target.id ? { ...item, quantity: +target.value } : item;
     });
+    sumCalorie();
   });
 };
 

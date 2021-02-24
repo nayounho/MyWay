@@ -2,7 +2,8 @@ type Category = {
   id: string,
   name: string,
   calories: number,
-  selected: boolean
+  selected: boolean,
+  quantity: number,
 }
 
 const state: { sizeState: { name: string, size: number }, selectedItem: Category[]} = {
