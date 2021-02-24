@@ -72,7 +72,7 @@ const menu = {
   ]
 };
 
-const myFavorite = [
+let myFavorite = [
   {
     id: 1,
     name: '꿀조합',
@@ -248,9 +248,9 @@ app.post('/myFavorite', (req, res) => {
   const newMyFavorite = req.body;
   let _myFavorite;
   if (myFavorite.filter(v => v.id === newMyFavorite.id).length) {
-    _myFavorite = myFavorite.map(v => (v.id === newMyFavorite.id ? newMyFavorite : v));
+    myFavorite = myFavorite.map(v => (v.id === newMyFavorite.id ? newMyFavorite : v));
   } else {
-    _myFavorite = [...myFavorite, newMyFavorite];
+    myFavorite = [...myFavorite, newMyFavorite];
   }
   res.send(_myFavorite);
 });
