@@ -14,8 +14,13 @@ export default () => {
   $mywayBtn.addEventListener('click', async () => {
     if (!state.selectedItem.find((item: { id: string }) => /meats/.test(item.id))
       || !state.selectedItem.find((item: { id: string }) => /bread/.test(item.id))) {
-        $mywayBtn.textContent = '빵과 메뉴는 필수 선택 항목입니다.';
-        $mywayBtn.style.color = 'red';
+        const $addBtnPopup = document.querySelector('.myway-btn__alertPopup') as HTMLElement;
+
+        $addBtnPopup.classList.add('active');
+        $addBtnPopup.addEventListener('animationend', () => {
+          $addBtnPopup.classList.remove('active');
+        });
+
         return;
       }
     
