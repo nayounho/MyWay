@@ -27,8 +27,10 @@ const updateStaticList = (target: HTMLInputElement) => {
   });
 }
 
-const deleteCheckedItem = (target: HTMLElement) => {
-  console.log(state.selectedItem);
+const deleteCheckedItem = (target: HTMLInputElement) => {
+  const deleteItemId = target.id.replace('selected-', '');
+
+  state.selectedItem = state.selectedItem.filter(item => item.id !== deleteItemId);
 };
 
 export { updateStaticList, updateDynamicList, deleteCheckedItem }

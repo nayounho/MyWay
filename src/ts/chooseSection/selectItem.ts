@@ -6,6 +6,7 @@ import checkQuantity from '../customSection/checkQuantity';
 import updateQuantityState from '../updateState/updateQuantityState';
 import { renderStaticList, renderDynamicList } from '../customSection/renderSelectedItem';
 import { updateStaticList, updateDynamicList, deleteCheckedItem } from '../updateState/updateSelectedState'
+import uncheckItem from '../chooseSection/uncheckItem';
 
 const $mainChoose = document.querySelector('.main__choose') as HTMLElement;
 const $checkedItemList = document.querySelector('.custom__list-dynamic') as HTMLUListElement;
@@ -49,11 +50,13 @@ export default () => {
   $checkedItemList.addEventListener('click', e => {
     const target = e.target as HTMLElement;
 
-    if (target.matches('i')) {
-      // deleteCheckedItem(target);
-      const $upperLi = target.parentNode?.parentNode?.firstElementChild as HTMLLIElement;
+    if (target.matches('i.fa-times-circle')) {
+      const $upperInput = target.parentNode?.parentNode?.firstElementChild as HTMLInputElement;
 
-      console.log($upperLi.id);
+      deleteCheckedItem($upperInput);
+      renderDynamicList();
+      selectModalTitle($upperInput);
+      uncheckItem($upperInput);
     }
   });
 };
