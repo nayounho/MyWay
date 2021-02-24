@@ -14,8 +14,6 @@ const updateDynamicList = (target: HTMLInputElement) => {
   state.selectedItem = state.selectedItem.map(item => {
     return item.hasOwnProperty('quantity') ? item : { ...item, quantity: 1 };
   });
-
-  console.log(state.selectedItem)
 }
 
 const updateStaticList = (target: HTMLInputElement) => {
@@ -26,9 +24,11 @@ const updateStaticList = (target: HTMLInputElement) => {
   state.selectedItem = [...state.selectedItem.filter(item => item.id.replace(/[0-9]+/, '') !== categoryName), ...category.filter(item => item.id === masterItem.id)];
   state.selectedItem = state.selectedItem.map(item => {
     return item.hasOwnProperty('quantity') ? item : { ...item, quantity: 1 };
-  })
-  
-  console.log(state.selectedItem)
+  });
 }
 
-export { updateStaticList, updateDynamicList }
+const deleteCheckedItem = (target: HTMLElement) => {
+  console.log(state.selectedItem);
+};
+
+export { updateStaticList, updateDynamicList, deleteCheckedItem }
