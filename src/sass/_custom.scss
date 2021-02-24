@@ -6,9 +6,53 @@
   box-shadow: 5px 5px 5px $grey-for-shadow;
 }
 
+@mixin animation-mixin($name) {
+  @keyframes #{$name} {
+    0% { opacity: 0; }
+    20% { opacity: .5; }
+    70% { opacity: 1; }
+    100% { opacity: 1; }
+  }
+}
+
+@include animation-mixin(fadeIn);
+
 .main__custom {
+  position: relative;
   @include mainBox();
   background-color: $white;
+
+  .custom__alertPopup {
+    display: none;
+
+    &.active {
+      display: block;
+      animation: fadeIn 2s linear 0s 2 alternate;
+      user-select: none;
+      position: absolute;
+      top: 100px;
+      left: -20px;
+      width: 300px;
+      height: 30px;
+      background-color: $grey;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 30px;
+      font-size: $content-font-size;
+      color: $white;
+    }
+
+    &::after {
+      content: "";
+      border-top: 10px solid $grey;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 0px solid transparent;
+      position: absolute;
+      top: 28px;
+      left: 240px;
+    }
+  }
 }
 
 .custom__heading {
