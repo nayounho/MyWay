@@ -30,9 +30,10 @@ export default () => {
   });
 
   $sizeList.addEventListener('click', e => {
-    updateSizeState(e)
+    updateSizeState(e);
     renderSizeInfo();
     sumCalorie();
+    selectModalTitle(<HTMLInputElement>e.target);
   });
 
   $checkedItemList.addEventListener('change', e => {
