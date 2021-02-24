@@ -94,11 +94,10 @@ const makeSelectedItem = () => {
   // 🎃 input:number의 수량 조정할 경우 state 갱신
   $checkedItemList.addEventListener('change', e => {
     const target = e.target as HTMLInputElement;
-    const $input = document.querySelector('.list-dynamic__num') as HTMLInputElement;
 
     // limit quantity
-    if (+$input.value <= 0 || +$input.value > 10) {
-      $input.value = '1';
+    if (+target.value <= 0 || +target.value > 10) {
+      target.value = '1';
 
       const $popUp = document.querySelector('.custom__alertPopup') as HTMLElement;
 
