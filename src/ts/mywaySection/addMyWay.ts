@@ -4,7 +4,6 @@ const url = 'http://localhost:7000';
 import state from '../state/state';
 import renderMyFavorite from './renderMyFavorite';
 import chooseSectionRender from '../chooseSection/chooseSectionRender';
-import renderCusmtomSection from '../customSection/renderCustomSection';
 
 const $mywayBtn = document.querySelector('.myway-btn') as HTMLButtonElement;
 const $titleInput = document.querySelector('.title__input') as HTMLInputElement;
@@ -34,6 +33,5 @@ export default () => {
 
     await renderMyFavorite();
     await chooseSectionRender();
-    renderCusmtomSection();
   })
 }
