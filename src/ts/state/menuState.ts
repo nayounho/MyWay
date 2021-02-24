@@ -1,22 +1,7 @@
+import type { MenuState } from './types';
+
 const axios = require('axios');
 const url = 'http://localhost:7000';
-
-type Category = {
-  id: string,
-  name: string,
-  calories: number,
-  selected: boolean
-}[]
-
-type MenuState = { 
-  bread: Category[],
-  meats: Category[],
-  cheese: Category[],
-  veggies: Category[],
-  sauce: Category[],
-  extras: Category[],
-  [proName: string]: any
-};
 
 let menuState: MenuState = {
   bread: [],
