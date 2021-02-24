@@ -3,11 +3,13 @@ import chooseSectionMain from './chooseSection/chooseSectionMain';
 import { getMenu } from './state/menuState';
 import renderMyFavorite from './mywaySection/renderMyFavorite';
 import { resetTitle, generateName } from './titleSection/generateName';
+import addMyWay from './mywaySection/myWayMain';
 import sumCalorie from './sumCalorie/sumCalorie';
 import renderCustom from './customSection/renderCustomSection';
 
 chooseSectionMain();
 resetTitle();
+addMyWay();
 
 document.addEventListener('DOMContentLoaded', async () => {
   const $spinnerContainer = document.querySelector('.spinner-container') as HTMLElement;
