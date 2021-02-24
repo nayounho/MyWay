@@ -11,14 +11,14 @@ const $calcnumber = document.querySelector('.calc__number') as HTMLSpanElement;
 //   selected: boolean
 // };
 
-
 const sumCalorie = () => {
-  let sum: number = 0;
-    state.selectedItem.forEach( v => {
-    sum += v.calories;
-    sum *= state.sizeState.size;
-  $calcnumber.textContent = `${sum}`;
-  }) 
-}
+  let sumCal: number = 0;  
+    state.selectedItem.forEach( item => {
+      sumCal += (item.calories * item.quantity);
+    });
+
+    sumCal *= state.sizeState.size;
+  $calcnumber.textContent = `${sumCal}`;
+};
 
 export default sumCalorie;
