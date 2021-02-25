@@ -4,13 +4,13 @@ import state from '../state/state';
 const renderBreadName = () => {
   const $listStaticBread = document.querySelector('.list-static__bread > span') as HTMLElement;
   const breadName = state.selectedItem.find(item => /bread/.test(item.id)) as Category;
-  $listStaticBread.textContent = breadName.name;
+  $listStaticBread.textContent = breadName ? breadName.name : '';
 }
 
 const renderMeatsName = () => {
   const $listStaticMeats = document.querySelector('.list-static__meats > span') as HTMLElement;
   const meatsName = state.selectedItem.find(item => /meats/.test(item.id)) as Category;
-  $listStaticMeats.textContent = meatsName.name;
+  $listStaticMeats.textContent = meatsName ? meatsName.name : '';
 }
 
 const renderDynamicList = () => {

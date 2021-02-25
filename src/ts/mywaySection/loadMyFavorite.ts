@@ -15,13 +15,8 @@ const renderChooseSection = (totalList: MenuState) => {
   
   categories.forEach(category => {
     const $parentNode = document.querySelector(`.${category}__item`) as HTMLUListElement;
-    console.log($parentNode);
-    const $title = document.querySelector(`.${category}__title`) as HTMLUListElement;
 
     $parentNode.innerHTML = totalList[category].map(({ id, name, selected }: Category) => `<li><input type="${category === 'bread' || category === 'meats' ? 'radio' : 'checkbox'}" id="${id}" name="${category}" ${selected ? 'checked' : ''}><label for="${id}">${name}</label></li>`).join('');
-
-    // ($parentNode.previousElementSibling as HTMLDivElement).textContent = '선택하세요';
-    // $title.innerHTML = `선택하세요<i class="fas fa-sort-down"></i>`;
   })
 }
 
@@ -43,6 +38,7 @@ export default () => {
     $calcNumber.textContent = item.calories + '';
     
     state.selectedItem = item.item;
+    state.id = item.id;
 
     const { data: totalList }: { data: MenuState } = await axios.get(url + '/menu');
 
@@ -56,8 +52,6 @@ export default () => {
         return item;
       })
     })
-
-    console.log(totalList);
 
     renderSizeInfo();
     renderBreadName();
