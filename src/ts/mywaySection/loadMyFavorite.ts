@@ -28,7 +28,7 @@ export default () => {
     const target = e.target as HTMLElement;
     const targetPrent = target.closest('li') as HTMLElement
     const $calcNumber = document.querySelector('.calc__number') as HTMLSpanElement;
-    
+
     if (!target.matches('.edit-myway')) return;
     state.selectedItem = [];
 
