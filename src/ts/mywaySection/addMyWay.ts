@@ -7,7 +7,7 @@ import chooseSectionRender from '../chooseSection/chooseSectionRender';
 import { generateName } from '../titleSection/generateName'
 import renderSizeInfo from '../customSection/renderSizeInfo';
 import { renderBreadName, renderMeatsName, renderDynamicList } from '../customSection/renderSelectedItem';
-
+import type { myFavoriteItem } from '../state/types';
 
 const $mywayBtn = document.querySelector('.myway-btn') as HTMLButtonElement;
 const $titleInput = document.querySelector('.title__input') as HTMLInputElement;
@@ -29,9 +29,10 @@ export default () => {
       
     const { data: myFavoriteList } = await axios.get(url + '/myFavorite');
     state.id = state.id === null ? await myFavoriteList.length + 1 : state.id;
-    // state.id = state.id === null ? await myFavoriteList.reduce((prevItem, currItem) => {
-    //   // .id
-    // }, 0);
+    // state.id = state.id === null ? await myFavoriteList.forEach((item: myFavoriteItem) => {
+      
+    // });
+    state.name = state.name === null ? await myFavoriteList.name : state.name;
 
     await axios.post(url + '/myFavorite', {
       id: state.id,
@@ -41,6 +42,7 @@ export default () => {
     })
 
     state.id = null;
+    state.name = null;
     $calcNumber.textContent = 0 + '';
     state.selectedItem = [];
 
