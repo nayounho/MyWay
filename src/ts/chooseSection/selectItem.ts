@@ -4,7 +4,7 @@ import selectModalTitle from './selectModalTitle';
 import updateSizeState from '../updateState/updateSizeState';
 import checkQuantity from '../customSection/checkQuantity';
 import updateQuantityState from '../updateState/updateQuantityState';
-import { renderStaticList, renderDynamicList } from '../customSection/renderSelectedItem';
+import { renderBreadName, renderMeatsName, renderDynamicList } from '../customSection/renderSelectedItem';
 import { updateStaticList, updateDynamicList, deleteCheckedItem } from '../updateState/updateSelectedState'
 import uncheckItem from '../chooseSection/uncheckItem';
 
@@ -23,7 +23,9 @@ export default () => {
       renderDynamicList();
     } else if (target.type === 'radio') {
       updateStaticList(target);
-      renderStaticList(target);
+      // renderStaticList();
+      if (target.name === 'bread') renderBreadName();
+      else if (target.name === 'meats') renderMeatsName();
     }
 
     sumCalorie();

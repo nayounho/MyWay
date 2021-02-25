@@ -1,20 +1,17 @@
-import type { Category } from '../state/types';
-import { menuState } from '../state/menuState';
+import { Category } from '../state/types';
 import state from '../state/state';
 
-const renderStaticList = (target: HTMLInputElement) => {
-  const categoryName = target.id.replace(/[0-9]+/, '');
-  const category: Category[] = menuState[categoryName];
+const renderBreadName = () => {
+  const $listStaticBread = document.querySelector('.list-static__bread > span') as HTMLElement;
+  const breadName = state.selectedItem.find(item => /bread/.test(item.id)) as Category;
+  $listStaticBread.textContent = breadName ? breadName.name : '';
+}
 
-  const $node = document.querySelector(`.list-static__${categoryName} > span`) as HTMLElement;
-  let html = '';
-
-  category.forEach((item: Category) => {
-    if (item.id === target.id) html = item.name;
-  });
-
-  $node.textContent = html;
-};
+const renderMeatsName = () => {
+  const $listStaticMeats = document.querySelector('.list-static__meats > span') as HTMLElement;
+  const meatsName = state.selectedItem.find(item => /meats/.test(item.id)) as Category;
+  $listStaticMeats.textContent = meatsName ? meatsName.name : '';
+}
 
 const renderDynamicList = () => {
   const $checkedItemList = document.querySelector('.custom__list-dynamic') as HTMLUListElement;
@@ -35,4 +32,4 @@ const renderDynamicList = () => {
   <span>What's your way?</span>`;
 };
 
-export { renderStaticList, renderDynamicList }
+export { renderBreadName, renderMeatsName, renderDynamicList }
