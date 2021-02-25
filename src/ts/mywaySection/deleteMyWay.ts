@@ -23,6 +23,7 @@ export default () => {
       const { data: newMyFavoriteList } = await axios.delete(url + `/myFavorite/${$li.id}`);
 
       await renderMyFavorite();
+      console.log(state.selectedItem);
     }
 
     spinner.hide();
