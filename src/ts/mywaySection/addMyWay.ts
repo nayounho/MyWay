@@ -28,10 +28,19 @@ export default () => {
       }
       
     const { data: myFavoriteList } = await axios.get(url + '/myFavorite');
-    state.id = state.id === null ? await myFavoriteList.length + 1 : state.id;
-    // state.id = state.id === null ? await myFavoriteList.forEach((item: myFavoriteItem) => {
-      
-    // });
+    const generateId = async () => {
+      let newId = -1;
+
+      await myFavoriteList.forEach((item: myFavoriteItem) => {
+        if (item.id >= newId) newId = item.id;
+      });
+
+      newId += 1;
+      console.log(newId);
+      return newId;
+    };
+
+    state.id = state.id === null ? await generateId() : state.id;
     state.name = state.name === null ? await myFavoriteList.name : state.name;
 
     await axios.post(url + '/myFavorite', {
@@ -41,6 +50,7 @@ export default () => {
       calories: $calcNumber.textContent
     })
 
+    // state 초기화
     state.id = null;
     state.name = null;
     $calcNumber.textContent = 0 + '';
