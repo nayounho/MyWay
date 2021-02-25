@@ -11,6 +11,45 @@ const menu = {
     {
       id: 'bread3', name: 'Artisan Flatbread', calories: 230, selected: false
     },
+    {
+      id: 'bread4', name: 'Habanero Wrap', calories: 300, selected: false
+    },
+    {
+      id: 'bread5', name: 'Harvest Bread', calories: 230, selected: false
+    },
+    {
+      id: 'bread6', name: 'Hearty Italian Bread', calories: 210, selected: false
+    },
+    {
+      id: 'bread7', name: 'Italian Herbs & Cheese Bread', calories: 240, selected: false
+    },
+    {
+      id: 'bread8', name: 'Italian White Bread', calories: 200, selected: false
+    },
+    {
+      id: 'bread9', name: 'Jalapeno Cheese/Cheddar Bread', calories: 240, selected: false
+    },
+    {
+      id: 'bread10', name: 'Monterey Cheddar Bread', calories: 240, selected: false
+    },
+    {
+      id: 'bread11', name: 'Parmesan Oregano Bread', calories: 210, selected: false
+    },
+    {
+      id: 'bread12', name: 'Roasted Garlic Bread', calories: 230, selected: false
+    },
+    {
+      id: 'bread13', name: 'Rye Bread', calories: 190, selected: false
+    },
+    {
+      id: 'bread14', name: 'Sourdough Bread', calories: 190, selected: false
+    },
+    {
+      id: 'bread15', name: 'Spinach Wrap', calories: 300, selected: false
+    },
+    {
+      id: 'bread16', name: 'Tomato Basil Wrap', calories: 300, selected: false
+    },
   ],
   meats: [
     {
@@ -21,6 +60,78 @@ const menu = {
     },
     {
       id: 'meats3', name: 'Buffalo Chicken Strips', calories: 90, url: 'https://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats4', name: 'Chicken Enchilada', calories: 120, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats5', name: 'Chicken Salad', calories: 140, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats6', name: 'Chicken Strips', calories: 80, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats7', name: 'Cold Cut Combo Meats', calories: 130, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats8', name: 'Corned Beef', calories: 150, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats9', name: 'Egg Salad', calories: 250, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats10', name: 'Falafel', calories: 200, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats11', name: 'Fish Filet', calories: 190, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats12', name: 'Ham', calories: 60, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats13', name: 'Italian B.M.T. Meats', calories: 180, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats14', name: 'Italian Hero Meats', calories: 230, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats15', name: 'Meatballs', calories: 260, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats16', name: 'Orchard Chicken Salad', calories: 140, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats17', name: 'Pastrami', calories: 150, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats18', name: 'Roast Beef', calories: 90, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats19', name: 'Roasted Chicken Patty', calories: 90, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats20', name: 'Rotisserie-Style Chicken', calories: 120, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats21', name: 'Seafood Sensation', calories: 190, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats22', name: 'Steak', calories: 110, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats23', name: 'Subway Club Meats', calories: 90, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats24', name: 'Teriyaki Glazed Chicken Strips', calories: 100, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats25', name: 'Tuna', calories: 250, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats26', name: 'Turkey Breast', calories: 50, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
+    },
+    {
+      id: 'meats27', name: 'Veggie Patty', calories: 160, url: 'htt5ps://www.subway.co.kr/images/menu/sandwich_pm10.jpg', selected: false
     },
   ],
   cheese: [
@@ -33,6 +144,24 @@ const menu = {
     {
       id: 'cheese3', name: 'Feta Cheese', calories: 35, selected: false
     },
+    {
+      id: 'cheese4', name: 'Monterey Cheddar Cheese, Shredded', calories: 50, selected: false
+    },
+    {
+      id: 'cheese5', name: 'Mozzarella Cheese, Shredded', calories: 40, selected: false
+    },
+    {
+      id: 'cheese6', name: 'Parmesan Cheese', calories: 5, selected: false
+    },
+    {
+      id: 'cheese7', name: 'Pepperjack Cheese', calories: 50, selected: false
+    },
+    {
+      id: 'cheese8', name: 'Provolone Cheese', calories: 50, selected: false
+    },
+    {
+      id: 'cheese9', name: 'Swiss Cheese', calories: 50, selected: false
+    },
   ],
   veggies: [
     {
@@ -44,6 +173,39 @@ const menu = {
     {
       id: 'veggies3', name: 'Cucumbers', calories: 0, selected: false
     },
+    {
+      id: 'veggies4', name: 'Green Chiles', calories: 0, selected: false
+    },
+    {
+      id: 'veggies5', name: 'Green Peppers', calories: 0, selected: false
+    },
+    {
+      id: 'veggies6', name: 'Jalapeno Peppers', calories: 0, selected: false
+    },
+    {
+      id: 'veggies7', name: 'Lettuce', calories: 0, selected: false
+    },
+    {
+      id: 'veggies8', name: 'Mushrooms', calories: 5, selected: false
+    },
+    {
+      id: 'veggies9', name: 'Olives', calories: 0, selected: false
+    },
+    {
+      id: 'veggies10', name: 'Onions', calories: 0, selected: false
+    },
+    {
+      id: 'veggies11', name: 'Pickles', calories: 0, selected: false
+    },
+    {
+      id: 'veggies12', name: 'Spinach', calories: 0, selected: false
+    },
+    {
+      id: 'veggies13', name: 'Sweet Peppers', calories: 15, selected: false
+    },
+    {
+      id: 'veggies14', name: 'Tomatoes', calories: 5, selected: false
+    },
   ],
   sauce: [
     {
@@ -54,6 +216,78 @@ const menu = {
     },
     {
       id: 'sauce3', name: 'Chipotle Southwest Sauce', calories: 100, selected: false
+    },
+    {
+      id: 'sauce4', name: 'Creamy Italian', calories: 80, selected: false
+    },
+    {
+      id: 'sauce5', name: 'Creamy Sriracha', calories: 40, selected: false
+    },
+    {
+      id: 'sauce6', name: 'Fire Roasted Tomato Sauce', calories: 80, selected: false
+    },
+    {
+      id: 'sauce7', name: 'Giardiniera', calories: 80, selected: false
+    },
+    {
+      id: 'sauce8', name: 'Golden Italian', calories: 80, selected: false
+    },
+    {
+      id: 'sauce9', name: 'Gorgonzola Sauce', calories: 100, selected: false
+    },
+    {
+      id: 'sauce10', name: 'Honey Mustard Sauce', calories: 30, selected: false
+    },
+    {
+      id: 'sauce11', name: 'Hot Pepper Relish', calories: 0, selected: false
+    },
+    {
+      id: 'sauce12', name: 'Ketchup', calories: 20, selected: false
+    },
+    {
+      id: 'sauce13', name: 'Light Mayonnaise', calories: 50, selected: false
+    },
+    {
+      id: 'sauce14', name: 'Mayonnaise', calories: 110, selected: false
+    },
+    {
+      id: 'sauce15', name: 'Mustard', calories: 5, selected: false
+    },
+    {
+      id: 'sauce16', name: 'Oil', calories: 45, selected: false
+    },
+    {
+      id: 'sauce17', name: 'Ranch Dressing', calories: 110, selected: false
+    },
+    {
+      id: 'sauce18', name: 'Savory Caesar', calories: 130, selected: false
+    },
+    {
+      id: 'sauce19', name: 'Signature Horseradish Sauce', calories: 110, selected: false
+    },
+    {
+      id: 'sauce20', name: 'Subway Vinaigrette', calories: 40, selected: false
+    },
+    {
+      id: 'sauce21', name: 'Subway Vinaigrette Dressing', calories: 110, selected: false
+    },
+    {
+      id: 'sauce22', name: 'Sweet Chili Sauce', calories: 30, selected: false
+    },
+    {
+      id: 'sauce23', name: 'Sweet Onion Sauce', calories: 40, selected: false
+    },
+    {
+      id: 'sauce24', name: 'Sweet Potato Curry', calories: 70, selected: false
+    },
+    {
+      id: 'sauce25', name: 'Thousand Island Dressing', calories: 80, selected: false
+    },
+    {
+      id: 'sauce26', name: 'Tzatziki Sauce', calories: 110, selected: false
+    },
+    {
+      id: 'sauce27', name: 'Vinegar', calories: 0, selected: false
     },
   ],
   extras: [
