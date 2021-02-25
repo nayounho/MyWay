@@ -36,7 +36,7 @@ export default () => {
       });
 
       newId += 1;
-      console.log(newId);
+
       return newId;
     };
 
