@@ -3,7 +3,7 @@ import type { Category } from '../state/types'
 const axios = require('axios');
 const url = 'http://localhost:7000';
 
-const getItem = async (item: string, btnType: string) => {
+const renderMenuList = async (item: string, btnType: string) => {
   const { data: items }: { data: Category[] } = await axios.get(url + `/menu.${item}`);
 
   const $parentNode = document.querySelector(`.${item}__item`) as HTMLUListElement;
@@ -17,11 +17,11 @@ const getItem = async (item: string, btnType: string) => {
 
 export default async () => {
   await Promise.all([
-    getItem('bread', 'radio'),
-    getItem('meats', 'radio'),
-    getItem('cheese', 'checkbox'),
-    getItem('veggies', 'checkbox'),
-    getItem('sauce', 'checkbox'),
-    getItem('extras', 'checkbox'),
+    renderMenuList('bread', 'radio'),
+    renderMenuList('meats', 'radio'),
+    renderMenuList('cheese', 'checkbox'),
+    renderMenuList('veggies', 'checkbox'),
+    renderMenuList('sauce', 'checkbox'),
+    renderMenuList('extras', 'checkbox'),
   ])
 }
