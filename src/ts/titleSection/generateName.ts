@@ -1,3 +1,5 @@
+import state from '../state/state';
+
 const axios  = require('axios');
 const url = 'http://localhost:7000';
 
@@ -20,7 +22,7 @@ const resetTitle = () => {
 
   $titleInput.addEventListener('focusout', () => {
     if ($titleInput.value === '') {
-     $titleInput.value = initalInputValue;
+     $titleInput.value = state.name === null ?initalInputValue : state.name;
     }
   });
 };

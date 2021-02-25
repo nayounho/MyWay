@@ -39,6 +39,7 @@ export default () => {
     
     state.selectedItem = item.item;
     state.id = item.id;
+    state.name = item.name;
 
     const { data: totalList }: { data: MenuState } = await axios.get(url + '/menu');
 

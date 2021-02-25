@@ -32,6 +32,7 @@ export default () => {
       
     const { data: myFavoriteList } = await axios.get(url + '/myFavorite');
     state.id = state.id === null ? await myFavoriteList.length + 1 : state.id;
+    state.name = state.name === null ? await myFavoriteList.name : state.name;
 
     await axios.post(url + '/myFavorite', {
       id: state.id,
@@ -41,6 +42,7 @@ export default () => {
     })
 
     state.id = null;
+    state.name = null;
     $calcNumber.textContent = 0 + '';
     state.selectedItem = [];
 

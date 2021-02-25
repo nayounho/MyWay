@@ -25,7 +25,7 @@ export default (target: HTMLInputElement) => {
 
     return;
   } else if (target.type === 'checkbox' || target.type === 'radio') {
-    $targetNameTitle.textContent = name === '' ? '선택하세요' : name;
-    $targetNameModalTitle.textContent = name === '' ? '선택하세요' : name;
+    $targetNameTitle.innerHTML = name === '' ? '선택하세요<i class="fas fa-sort-down"></i>' : name;
+    $targetNameModalTitle.innerHTML = name === '' ? '선택하세요<i class="fas fa-sort-down"></i>' : name;
   } else return;
 };
