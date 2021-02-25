@@ -15,14 +15,14 @@ const carousel = async () => {
     $carouselControlNext.addEventListener('click', () => {
       // change color of this button
       if (carState.currentSlide >= carState.numOfSlides - 5) {
-        $carouselControlNext.style.color = 'gray';
+        $carouselControlNext.style.color = '#bdbdbd';
       }
 
       if (carState.currentSlide >= carState.numOfSlides - 4) {
         return;
       }
 
-      $carouselControlPrev.style.color = 'greenyellow';
+      $carouselControlPrev.style.color = '#f9d142';
       carState.currentSlide += 1;
       $carouselSlides.style.setProperty('--currentSlide', carState.currentSlide + '');
       $carouselSlides.style.setProperty('--duration', '500');
@@ -31,14 +31,14 @@ const carousel = async () => {
     $carouselControlPrev.addEventListener('click', () => {
       // change color of this button
       if (carState.currentSlide <= 1) {
-        $carouselControlPrev.style.color = 'gray';
+        $carouselControlPrev.style.color = '#bdbdbd';
       }
 
       if (carState.currentSlide <= 0) {
         return;
       }
 
-      $carouselControlNext.style.color = 'greenyellow';
+      $carouselControlNext.style.color = '#f9d142';
       carState.currentSlide -= 1;
       $carouselSlides.style.setProperty('--currentSlide', carState.currentSlide + '');
       $carouselSlides.style.setProperty('--duration', '500');

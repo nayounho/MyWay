@@ -113,8 +113,9 @@
 .carousel-control {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-75%);
   font-size: 4em;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;
@@ -127,10 +128,10 @@
 
 .carousel-control.prev {
   left: 0px;
-  color: gray;
+  color: #bdbdbd;
 }
 
 .carousel-control.next {
   right: -5px;
-  color: greenyellow;
+  color: $yellow;
 }
