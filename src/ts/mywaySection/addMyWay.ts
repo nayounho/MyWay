@@ -26,9 +26,6 @@ export default () => {
 
         return;
       }
-    
-    $mywayBtn.textContent = 'MY WAY';
-    $mywayBtn.style.color = 'rgba(250, 251, 249, 1)';
       
     const { data: myFavoriteList } = await axios.get(url + '/myFavorite');
     state.id = state.id === null ? await myFavoriteList.length + 1 : state.id;

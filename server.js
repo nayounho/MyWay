@@ -265,6 +265,7 @@ app.patch('/myFavorite/:id', (req, res) => {
 
 app.delete('/myFavorite/:id', (req, res) => {
   const id = +req.params.id;
-  const _myFavorite = myFavorite.filter(diary => diary.id !== id);
-  res.send(_myFavorite);
+  myFavorite = myFavorite.filter(diary => diary.id !== id);
+
+  res.send(myFavorite);
 });
