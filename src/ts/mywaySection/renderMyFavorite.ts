@@ -1,3 +1,5 @@
+import spinner from '../utils/spinner';
+
 const axios = require('axios');
 
 const render = async () => {

@@ -1,3 +1,5 @@
+import spinner from '../utils/spinner';
+
 const axios = require('axios');
 const url = 'http://localhost:7000';
 
@@ -15,6 +17,7 @@ const $calcNumber = document.querySelector('.calc__number') as HTMLSpanElement;
 
 export default () => {
   $mywayBtn.addEventListener('click', async () => {
+    spinner.display();
     if (!state.selectedItem.find((item: { id: string }) => /meats/.test(item.id))
       || !state.selectedItem.find((item: { id: string }) => /bread/.test(item.id))) {
         const $addBtnPopup = document.querySelector('.myway-btn__alertPopup') as HTMLElement;
@@ -24,6 +27,8 @@ export default () => {
           $addBtnPopup.classList.remove('active');
         });
 
+        spinner.hide();
+        
         return;
       }
       
@@ -50,5 +55,7 @@ export default () => {
     renderBreadName();
     renderMeatsName();
     renderDynamicList();
+
+    spinner.hide();
   })
 }

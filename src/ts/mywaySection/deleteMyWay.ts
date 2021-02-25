@@ -1,3 +1,5 @@
+import spinner from '../utils/spinner';
+
 const axios = require('axios');
 const url = 'http://localhost:7000';
 
@@ -11,6 +13,8 @@ showMorePopup;
 
 export default () => {
   $mywayList.addEventListener('click', async e => {
+    spinner.display();
+
     const $target = e.target as HTMLElement;
 
     if ($target.matches('.delete-myway')) {
@@ -20,5 +24,7 @@ export default () => {
 
       await renderMyFavorite();
     }
+
+    spinner.hide();
   });
 };
