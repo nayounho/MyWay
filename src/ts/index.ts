@@ -5,6 +5,7 @@ import { resetTitle, generateName } from './titleSection/generateName';
 import myMyWayMain from './mywaySection/myWayMain';
 import chooseSectionMain from './chooseSection/chooseSectionMain';
 import carousel from './mywaySection/myWaycarousel';
+import spinner from './utils/spinner';
 
 chooseSectionMain();
 resetTitle();
@@ -12,7 +13,7 @@ myMyWayMain();
 carousel();
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const $spinnerContainer = document.querySelector('.spinner-container') as HTMLElement;
+  spinner.display();
   await Promise.all([
     new Promise((res, _) => {
       setTimeout(() => {
@@ -23,5 +24,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     chooseSectionRender(),
     getMenu(),
   ]);
-  $spinnerContainer.style.display = 'none';
+  spinner.hide();
 });

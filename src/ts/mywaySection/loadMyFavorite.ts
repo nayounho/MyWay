@@ -3,6 +3,7 @@ import state from '../state/state';
 import renderSizeInfo from '../customSection/renderSizeInfo'
 import { renderBreadName, renderMeatsName, renderDynamicList } from '../customSection/renderSelectedItem'
 import selectModalTitle from '../chooseSection/selectModalTitle';
+import spinner from '../utils/spinner';
 
 const axios = require('axios');
 const url = 'http://localhost:7000';
@@ -22,6 +23,8 @@ const renderChooseSection = (totalList: MenuState) => {
 
 export default () => {
   $mywayList.addEventListener('click', async (e: Event) => {
+    spinner.display();
+
     const target = e.target as HTMLElement;
     const targetPrent = target.closest('li') as HTMLElement
     const $calcNumber = document.querySelector('.calc__number') as HTMLSpanElement;
@@ -65,5 +68,7 @@ export default () => {
       const node = document.querySelector(`.${category}__item input`) as HTMLInputElement;
       selectModalTitle(node);
     })
+
+    spinner.hide();
   })
 }
