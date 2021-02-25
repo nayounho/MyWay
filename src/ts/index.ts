@@ -4,10 +4,12 @@ import renderMyFavorite from './mywaySection/renderMyFavorite';
 import { resetTitle, generateName } from './titleSection/generateName';
 import myMyWayMain from './mywaySection/myWayMain';
 import chooseSectionMain from './chooseSection/chooseSectionMain';
+import carousel from './mywaySection/myWaycarousel';
 
 chooseSectionMain();
 resetTitle();
 myMyWayMain();
+carousel();
 
 document.addEventListener('DOMContentLoaded', async () => {
   const $spinnerContainer = document.querySelector('.spinner-container') as HTMLElement;

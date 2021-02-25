@@ -111,6 +111,15 @@
   .list-dynamic__item {
     position: relative;
     margin-top: 14px;
+    display: flex;
+    flex-flow: row nowrap;
+
+    label {
+      font-size: $content-font-size;
+      line-height: 26px;
+      flex-basis: 190px;
+      word-break: break-all;
+    }
   }
 
   .list-dynamic__item:first-child {
@@ -123,11 +132,7 @@
     margin-right: 10px;
     border: 1px solid $grey;
     text-align: center;
-  }
-
-  label {
-    font-size: $content-font-size;
-    line-height: 26px;
+    flex-shrink: 0;
   }
 
   .list-dynamic__del {
@@ -144,5 +149,6 @@
     font-size: 1.1rem;
     color: $grey;
     background-color: transparent;
+    flex-shrink: 0;
   }
 }

@@ -24,7 +24,13 @@ const updateStaticList = (target: HTMLInputElement) => {
   state.selectedItem = [...state.selectedItem.filter(item => item.id.replace(/[0-9]+/, '') !== categoryName), ...category.filter(item => item.id === masterItem.id)];
   state.selectedItem = state.selectedItem.map(item => {
     return item.hasOwnProperty('quantity') ? item : { ...item, quantity: 1 };
-  })
+  });
 }
 
-export { updateStaticList, updateDynamicList }
+const deleteCheckedItem = (target: HTMLInputElement) => {
+  const deleteItemId = target.id.replace('selected-', '');
+
+  state.selectedItem = state.selectedItem.filter(item => item.id !== deleteItemId);
+};
+
+export { updateStaticList, updateDynamicList, deleteCheckedItem }
