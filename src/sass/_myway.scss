@@ -29,27 +29,80 @@
 }
 
 .myway__item {
-  cursor: pointer;
   display: inline-block;
-}
+  position: relative;
 
-.myway__item > figure {
-  margin: 14px 13px 70px;
-  width: 143px;
-  height: 120px;
-}
+  figure {
+    margin: 14px 13px 70px;
+    width: 143px;
+    height: 120px;
+  }
 
-.myway__item img {
-  width: 100%;
-  height: 100%;
-  margin-top: 4px;
-  border: 2px solid $grey;
-  border-radius: 10px;
-}
+  img {
+    width: 100%;
+    height: 100%;
+    margin-top: 4px;
+    border: 2px solid $grey;
+    border-radius: 10px;
+  }
 
-.myway__item figcaption {
-  margin-top: 7px;
-  text-align: center;
+  figcaption {
+    margin-top: 7px;
+    text-align: center;
+  }
+
+  .item__showmore {
+    position: absolute;
+    right: 14px;
+    top: 24px;
+
+    button {
+      cursor: pointer;
+    }
+
+    .showmore__btn {
+      background-color: $grey-for-shadow;
+      border: none;
+      border-radius: 50%;
+      font-weight: 900;
+      font-size: $heading-font-size;
+      color: $white;
+
+      &.hide {
+        display: none;
+      }
+    }
+
+    .showmore__popup {
+      display: none;
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      width: 143px;
+      height: 120px;
+      padding-top: 18px;
+      text-align: center;
+      box-sizing: border-box;
+
+      &.active {
+        display: block;
+      }
+
+      button {
+        display: inline-block;
+        width: 90px;
+        height: 30px;
+        margin: 5px;
+        background-color: $yellow;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 2px 2px 0 $black;
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: 700;
+        color: $black;
+      }
+    }
+  }
 }
 
 .carousel-control {
