@@ -42,6 +42,18 @@ export default () => {
   $checkedItemList.addEventListener('change', e => {
     const target = e.target as HTMLInputElement;
 
+    if (target.value === '1' || target.value === '10') {
+      target.addEventListener('click', function addActiveClass() {
+        const $popUp = document.querySelector('.custom__alertPopup') as HTMLElement;
+
+        $popUp.classList.add('active');
+        $popUp.addEventListener('animationend', () => {
+          $popUp.classList.remove('active');
+          target.removeEventListener('click', addActiveClass);
+        });
+      });
+    }
+
     checkQuantity(target);
     updateQuantityState(target);
     sumCalorie();
