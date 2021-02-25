@@ -4,8 +4,12 @@ const axios = require('axios');
 
 const render = async () => {
   const myFavorites = await axios.get('http://localhost:7000/myFavorite');
+  const $mywayList = document.querySelector('.myway__list') as HTMLUListElement;
 
   let html = '';
+
+  console.log(myFavorites.data.length);
+  if (myFavorites.data.length === 0) $mywayList.innerHTML = html;;
 
   myFavorites.data.forEach((myFavorite: any) => {
     html += `<li id="${myFavorite.id}" class="myway__item">
@@ -29,7 +33,6 @@ const render = async () => {
     </div>
   </li>`;
 
-  const $mywayList = document.querySelector('.myway__list') as HTMLUListElement;
   $mywayList.innerHTML = html;
   });
 };

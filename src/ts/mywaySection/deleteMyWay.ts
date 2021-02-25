@@ -21,7 +21,7 @@ export default () => {
     if ($target.matches('.delete-myway')) {
       const $li = $target.parentNode?.parentNode?.parentNode as HTMLElement;
 
-      const { data: newMyFavoriteList } = await axios.delete(url + `/myFavorite/${$li.id}`);
+      await axios.delete(url + `/myFavorite/${$li.id}`);
 
       await renderMyFavorite();
       await getNumOfSlides();
