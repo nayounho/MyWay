@@ -13,25 +13,40 @@
 
 .add-myway {
   position: relative;
-  width: 690px;
+  width: 400px;
   height: 57px;
   margin: 0 auto;
   box-shadow: 5px 5px 5px $grey-for-shadow;
   border-radius: 10px;
 
   .myway-btn {
+    cursor: pointer;
+    position: relative;
     display: block;
     width: 100%;
     height: 100%;
-    font-size: 30px;
-    background: linear-gradient(90deg, rgba(252,252,252,1) 0%, rgba(249,209,66,1) 35%, rgba(65,221,79,1) 100%);
+    background: $yellow;
     border-radius: 10px;
     border: $white;
+    box-shadow: 0 6px $grey-for-shadow;
+    font-size: 30px;
+    font-weight: 400;
     color: $white;
-    cursor: pointer;
+    letter-spacing: 8px;
 
     &:focus {
       outline: none;
+    }
+
+    &:hover {
+      background: linear-gradient(90deg, #fcfcfc 0%, #f9d142 35%, #41dd4f 100%);
+      box-shadow: 0 4px $grey-for-shadow;
+      top: 2px;
+    }
+
+    &:active {
+      box-shadow: none;
+      top: 6px;
     }
   }
 
@@ -44,7 +59,7 @@
       user-select: none;
       position: absolute;
       top: -46px;
-      right: 0;
+      right: -100px;
       width: 300px;
       height: 30px;
       background-color: $black;
