@@ -2,14 +2,14 @@ import { getMenu } from './state/menuState';
 import chooseSectionRender from './chooseSection/chooseSectionRender';
 import renderMyFavorite from './mywaySection/renderMyFavorite';
 import { resetTitle, generateName } from './titleSection/generateName';
-import addMyWayMain from './mywaySection/myWayMain';
+import myMyWayMain from './mywaySection/myWayMain';
 import chooseSectionMain from './chooseSection/chooseSectionMain';
 import carousel from './mywaySection/myWaycarousel';
 import deleteMyWay from './mywaySection/deleteMyWay';
 
 chooseSectionMain();
 resetTitle();
-addMyWayMain();
+myMyWayMain();
 carousel();
 
 document.addEventListener('DOMContentLoaded', async () => {

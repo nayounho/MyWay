@@ -4,7 +4,7 @@ type Category = {
   calories: number,
   selected: boolean,
   quantity: number,
-}
+};
 
 type MenuState = { 
   bread: Category[],
@@ -16,4 +16,13 @@ type MenuState = {
   [proName: string]: any
 };
 
-export type { Category, MenuState }
+type myFavoriteItem = {
+  id: number,
+  name: string,
+  item: Category[],
+  calories: number,
+};
+
+type myFavorite = myFavoriteItem[]
+
+export type { Category, MenuState, myFavoriteItem, myFavorite }

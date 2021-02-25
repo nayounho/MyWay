@@ -5,6 +5,9 @@ import state from '../state/state';
 import renderMyFavorite from './renderMyFavorite';
 import chooseSectionRender from '../chooseSection/chooseSectionRender';
 import { generateName } from '../titleSection/generateName'
+import renderSizeInfo from '../customSection/renderSizeInfo';
+import { renderBreadName, renderMeatsName, renderDynamicList } from '../customSection/renderSelectedItem';
+
 
 const $mywayBtn = document.querySelector('.myway-btn') as HTMLButtonElement;
 const $titleInput = document.querySelector('.title__input') as HTMLInputElement;
@@ -25,17 +28,25 @@ export default () => {
       }
       
     const { data: myFavoriteList } = await axios.get(url + '/myFavorite');
-    const newIdNum = await myFavoriteList.length + 1;
+    state.id = state.id === null ? await myFavoriteList.length + 1 : state.id;
 
     await axios.post(url + '/myFavorite', {
-      id: newIdNum,
+      id: state.id,
       name: $titleInput.value,
       item: state.selectedItem,
       calories: $calcNumber.textContent
     })
 
+    state.id = null;
+    $calcNumber.textContent = 0 + '';
+    state.selectedItem = [];
+
     await renderMyFavorite();
     await chooseSectionRender();
     await generateName();
+    renderSizeInfo();
+    renderBreadName();
+    renderMeatsName();
+    renderDynamicList();
   })
 }

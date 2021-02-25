@@ -90,7 +90,7 @@ let myFavorite = [
         id: 'veggies1', name: 'Banana Peppers', calories: 0, quantity: 1
       },
       {
-        id: 'condiments1', name: 'Barbecue Sauce', calories: 35, quantity: 3
+        id: 'sauce1', name: 'Barbecue Sauce', calories: 35, quantity: 3
       },
       {
         id: 'extras1', name: 'Avocado', calories: 60, quantity: 1
@@ -115,7 +115,7 @@ let myFavorite = [
         id: 'veggies1', name: 'Banana Peppers', calories: 0, quantity: 1
       },
       {
-        id: 'condiments1', name: 'Barbecue Sauce', calories: 35, quantity: 3
+        id: 'sauce1', name: 'Barbecue Sauce', calories: 35, quantity: 3
       },
       {
         id: 'extras1', name: 'Avocado', calories: 60, quantity: 1
@@ -140,7 +140,7 @@ let myFavorite = [
         id: 'veggies1', name: 'Banana Peppers', calories: 0, quantity: 1
       },
       {
-        id: 'condiments1', name: 'Barbecue Sauce', calories: 35, quantity: 3
+        id: 'sauce1', name: 'Barbecue Sauce', calories: 35, quantity: 3
       },
       {
         id: 'extras1', name: 'Avocado', calories: 60, quantity: 1
@@ -165,7 +165,7 @@ let myFavorite = [
         id: 'veggies1', name: 'Banana Peppers', calories: 0, quantity: 1
       },
       {
-        id: 'condiments1', name: 'Barbecue Sauce', calories: 35, quantity: 3
+        id: 'sauce1', name: 'Barbecue Sauce', calories: 35, quantity: 3
       },
       {
         id: 'extras1', name: 'Avocado', calories: 60, quantity: 1
@@ -190,7 +190,7 @@ let myFavorite = [
         id: 'veggies1', name: 'Banana Peppers', calories: 0, quantity: 1
       },
       {
-        id: 'condiments1', name: 'Barbecue Sauce', calories: 35, quantity: 3
+        id: 'sauce1', name: 'Barbecue Sauce', calories: 35, quantity: 3
       },
       {
         id: 'extras1', name: 'Avocado', calories: 60, quantity: 1
