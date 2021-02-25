@@ -17,7 +17,6 @@
 }
 
 .myway__item {
-  cursor: pointer;
   display: inline-block;
   position: relative;
 
@@ -41,7 +40,6 @@
   }
 
   .item__showmore {
-    background-color: yellow;
     position: absolute;
     right: 14px;
     top: 24px;
@@ -50,11 +48,40 @@
       cursor: pointer;
     }
 
+    .showmore__btn {
+      background-color: $grey-for-shadow;
+      border: none;
+      border-radius: 50%;
+      font-weight: 900;
+      font-size: $heading-font-size;
+      color: $white;
+
+      &.hide {
+        display: none;
+      }
+    }
+
     .showmore__popup {
       display: none;
-      
+
       &.active {
         display: block;
+        position: absolute;
+        top: 17px;
+        right: 18px;
+      }
+
+      button {
+        width: 90px;
+        height: 30px;
+        margin: 5px;
+        background-color: $yellow;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 2px 2px 0 $black;
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: 700;
+        color: $black;
       }
     }
   }

@@ -6,11 +6,13 @@ export default $mywayList?.addEventListener('click', e => {
   if ($target.matches('.showmore__btn')) {
     const $popup = $target.nextElementSibling as HTMLElement;
 
-    $popup?.classList.add('active');
+    $popup.classList.add('active');
+    $target.classList.add('hide');
 
     // close popup
     $popup.addEventListener('mouseleave', () => {
       $popup?.classList.remove('active');
+      $target.classList.remove('hide');
     });
   }
 });

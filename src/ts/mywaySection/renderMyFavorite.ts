@@ -18,10 +18,10 @@ const render = async () => {
       <button class="showmore__btn">···</button>
       <div class="showmore__popup">
         <button class="edit-myway">
-          편집하기
+          보기/편집
         </button>
         <button class="delete-myway">
-          삭제하기
+          삭제
         </button>
       </div>
     </div>
