@@ -1,3 +1,4 @@
+import { getNumOfSlides } from '../state/carouselState';
 import spinner from '../utils/spinner';
 
 const axios = require('axios');
@@ -23,7 +24,7 @@ export default () => {
       const { data: newMyFavoriteList } = await axios.delete(url + `/myFavorite/${$li.id}`);
 
       await renderMyFavorite();
-      console.log(state.selectedItem);
+      await getNumOfSlides();
     }
 
     spinner.hide();
