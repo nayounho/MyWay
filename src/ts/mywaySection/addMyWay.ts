@@ -29,6 +29,9 @@ export default () => {
       
     const { data: myFavoriteList } = await axios.get(url + '/myFavorite');
     state.id = state.id === null ? await myFavoriteList.length + 1 : state.id;
+    // state.id = state.id === null ? await myFavoriteList.reduce((prevItem, currItem) => {
+    //   // .id
+    // }, 0);
 
     await axios.post(url + '/myFavorite', {
       id: state.id,

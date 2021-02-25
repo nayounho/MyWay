@@ -20,5 +20,7 @@ export default () => {
 
       await renderMyFavorite();
     }
+
+    console.log(state.selectedItem)
   });
 };
