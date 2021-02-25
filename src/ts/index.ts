@@ -5,6 +5,7 @@ import { resetTitle, generateName } from './titleSection/generateName';
 import addMyWayMain from './mywaySection/myWayMain';
 import chooseSectionMain from './chooseSection/chooseSectionMain';
 import carousel from './mywaySection/myWaycarousel';
+import _showmore from './mywaySection/showMorePopup';
 
 chooseSectionMain();
 resetTitle();
@@ -25,3 +26,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   ]);
   $spinnerContainer.style.display = 'none';
 });
+
+_showmore;

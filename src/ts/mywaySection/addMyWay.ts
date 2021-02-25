@@ -23,9 +23,6 @@ export default () => {
 
         return;
       }
-    
-    $mywayBtn.textContent = 'MY WAY';
-    $mywayBtn.style.color = 'rgba(250, 251, 249, 1)';
       
     const { data: myFavoriteList } = await axios.get(url + '/myFavorite');
     const newIdNum = await myFavoriteList.length + 1;

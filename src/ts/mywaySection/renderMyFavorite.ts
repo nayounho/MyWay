@@ -14,6 +14,17 @@ const render = async () => {
       />
       <figcaption>${myFavorite.name}</figcaption>
     </figure>
+  <div class="item__showmore">
+      <button class="showmore__btn">···</button>
+      <div class="showmore__popup">
+        <button class="edit-myway">
+          편집하기
+        </button>
+        <button class="delete-myway">
+          삭제하기
+        </button>
+      </div>
+    </div>
   </li>`;
 
   const $mywayList = document.querySelector('.myway__list') as HTMLUListElement;
