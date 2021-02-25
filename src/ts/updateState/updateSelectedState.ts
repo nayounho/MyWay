@@ -14,8 +14,6 @@ const updateDynamicList = (target: HTMLInputElement) => {
   state.selectedItem = state.selectedItem.map(item => {
     return item.hasOwnProperty('quantity') ? item : { ...item, quantity: 1 };
   });
-
-  console.log(state.selectedItem)
 }
 
 const updateStaticList = (target: HTMLInputElement) => {
@@ -27,8 +25,6 @@ const updateStaticList = (target: HTMLInputElement) => {
   state.selectedItem = state.selectedItem.map(item => {
     return item.hasOwnProperty('quantity') ? item : { ...item, quantity: 1 };
   })
-  
-  console.log(state.selectedItem)
 }
 
 export { updateStaticList, updateDynamicList }

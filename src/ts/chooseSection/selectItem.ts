@@ -4,7 +4,7 @@ import selectModalTitle from './selectModalTitle';
 import updateSizeState from '../updateState/updateSizeState';
 import checkQuantity from '../customSection/checkQuantity';
 import updateQuantityState from '../updateState/updateQuantityState';
-import { renderStaticList, renderDynamicList } from '../customSection/renderSelectedItem';
+import { renderBreadName, renderMeatsName, renderDynamicList } from '../customSection/renderSelectedItem';
 import { updateStaticList, updateDynamicList } from '../updateState/updateSelectedState'
 
 const $mainChoose = document.querySelector('.main__choose') as HTMLElement;
@@ -22,7 +22,9 @@ export default () => {
       renderDynamicList();
     } else if (target.type === 'radio') {
       updateStaticList(target);
-      renderStaticList(target);
+      // renderStaticList();
+      if (target.name === 'bread') renderBreadName();
+      else if (target.name === 'meats') renderMeatsName();
     }
 
     sumCalorie();
