@@ -1,6 +1,7 @@
 .main__myway {
   width: 762px;
   margin: 0 auto;
+  position: relative;
 }
 
 .myway__title {
@@ -12,8 +13,19 @@
   color: $black;
 }
 
+.myway__listContainer {
+  overflow: hidden;
+  width: 676px;
+  margin: 0 auto;
+}
+
 .myway__list {
   margin-bottom: 30px;
+  --currentSlide: 0;
+  --duration: 0;
+  display: flex;
+  transition: transform calc(var(--duration) * 1ms) ease-out;
+  transform: translate3D(calc(var(--currentSlide) * -25%), 0, 0);
 }
 
 .myway__item {
@@ -21,7 +33,7 @@
   position: relative;
 
   figure {
-    margin: 14px 13px 0;
+    margin: 14px 13px 70px;
     width: 143px;
     height: 120px;
   }
@@ -91,4 +103,29 @@
       }
     }
   }
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4em;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.carousel-control:focus {
+  outline: none;
+}
+
+.carousel-control.prev {
+  left: 0px;
+  color: gray;
+}
+
+.carousel-control.next {
+  right: -5px;
+  color: greenyellow;
 }
