@@ -11,14 +11,15 @@ const carousel = async () => {
   const listData = myFavoriteList.data;  
   let currentSlide = 0;
   // let numOfSlides = listData.length;
-
-    if (listData.length > 4) {
-        $carouselControlNext?.addEventListener('click', () => {
-
-          const carousel1 = async () => {
-            const myFavoriteList = await axios.get('http://localhost:7000/myFavorite');
-            let numOfSlides = myFavoriteList.data.length;
-            // let currentSlide = 0;
+  console.log(currentSlide);
+  if (listData.length > 4) {
+    $carouselControlNext?.addEventListener('click', () => {
+      // let currentSlide = 1;
+      
+      const carousel1 = async () => {
+        const myFavoriteList = await axios.get('http://localhost:7000/myFavorite');
+        let numOfSlides = myFavoriteList.data.length;
+        console.log(currentSlide);
           
           if (currentSlide >= numOfSlides - 4) return $carouselControlNext.style.color = 'gray';
 
