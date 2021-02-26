@@ -42,7 +42,7 @@ export default () => {
   $checkedItemList.addEventListener('change', e => {
     const target = e.target as HTMLInputElement;
 
-    if (target.value === '1' || target.value === '10') {
+    if (+target.value === 1 || +target.value === 10) {
       target.addEventListener('click', function addActiveClass() {
         const $popUp = document.querySelector('.custom__alertPopup') as HTMLElement;
 
