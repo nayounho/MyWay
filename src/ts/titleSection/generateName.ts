@@ -18,16 +18,14 @@ const generateName = async () => {
 };
 
 const resetTitle = () => {
-  // const $inputTitle = document.querySelector('.title__input') as HTMLInputElement;
-  
   $titleInput.addEventListener('click', () => {
-    
     $titleInput.value = '';
   });
 
   $titleInput.addEventListener('focusout', () => {
     if ($titleInput.value === '') {
-     $titleInput.value = state.name === null ?initalInputValue : state.name;
+     $titleInput.value = state.name === 
+     null ? initalInputValue : state.name;
     }
   });
 };
