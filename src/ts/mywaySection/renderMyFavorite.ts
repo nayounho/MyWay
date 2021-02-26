@@ -8,7 +8,6 @@ const render = async () => {
 
   let html = '';
 
-  console.log(myFavorites.data.length);
   if (myFavorites.data.length === 0) $mywayList.innerHTML = html;;
 
   myFavorites.data.forEach((myFavorite: any) => {
