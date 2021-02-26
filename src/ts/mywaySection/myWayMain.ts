@@ -4,6 +4,6 @@ import deleteMyWay from './deleteMyWay';
 
 export default () => {
   addMyWay();
-  loadMyFavorite();
+  loadMyFavorite('.edit-myway');
   deleteMyWay();
 }
