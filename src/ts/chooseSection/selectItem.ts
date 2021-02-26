@@ -42,7 +42,7 @@ export default () => {
   $checkedItemList.addEventListener('change', e => {
     const target = e.target as HTMLInputElement;
 
-    if (target.value === '1' || target.value === '10') {
+    if (+target.value === 1 || +target.value === 10) {
       target.addEventListener('click', function addActiveClass() {
         const $popUp = document.querySelector('.custom__alertPopup') as HTMLElement;
 
@@ -59,8 +59,6 @@ export default () => {
     sumCalorie();
   });
 
-  // 현재는 choose section과 custom section에 대한 이벤트 모두 이 파일에서 처리하고 있음.
-  // 파일 분리 필요한가요?
   $checkedItemList.addEventListener('click', e => {
     const target = e.target as HTMLElement;
 
