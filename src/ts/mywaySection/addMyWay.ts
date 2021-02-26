@@ -10,6 +10,7 @@ import { generateName } from '../titleSection/generateName'
 import renderSizeInfo from '../customSection/renderSizeInfo';
 import { renderBreadName, renderMeatsName, renderDynamicList } from '../customSection/renderSelectedItem';
 import type { myFavoriteItem } from '../state/types';
+import { getNumOfSlides } from '../state/carouselState';
 
 const $mywayBtn = document.querySelector('.myway-btn') as HTMLButtonElement;
 const $titleInput = document.querySelector('.title__input') as HTMLInputElement;
@@ -64,6 +65,7 @@ export default () => {
     await renderMyFavorite();
     await chooseSectionRender();
     await generateName();
+    await getNumOfSlides();
     renderSizeInfo();
     renderBreadName();
     renderMeatsName();
