@@ -1,7 +1,5 @@
 import { carState, getNumOfSlides } from '../state/carouselState';
-import changeBtnColor from './carouselBtnColor';
 
-const axios = require('axios');
 const $carouselSlides = document.querySelector('.myway__list') as HTMLElement;
 const $carouselControlNext = document.querySelector('.carousel-control.next') as HTMLButtonElement;
 const $carouselControlPrev = document.querySelector('.carousel-control.prev') as HTMLButtonElement;
