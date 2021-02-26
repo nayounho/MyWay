@@ -1,6 +1,6 @@
 # MyWay 프로젝트
 #### by <img src="./readme_assets/whatsub_logo.png" alt="WHATSUB(team logo)" width="150"/>
-![screenshot](./readme_assets/screenshot.png)
+![screenshot](./readme_assets/screenshot_update00.png)
 
 ### MyWay 기획 의도
 
