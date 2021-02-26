@@ -10,6 +10,8 @@ import { generateName } from '../titleSection/generateName'
 import renderSizeInfo from '../customSection/renderSizeInfo';
 import { renderBreadName, renderMeatsName, renderDynamicList } from '../customSection/renderSelectedItem';
 import type { myFavoriteItem } from '../state/types';
+import { getNumOfSlides } from '../state/carouselState';
+import generateId from '../utils/generateId';
 
 const $mywayBtn = document.querySelector('.myway-btn') as HTMLButtonElement;
 const $titleInput = document.querySelector('.title__input') as HTMLInputElement;
@@ -33,17 +35,6 @@ export default () => {
       }
       
     const { data: myFavoriteList } = await axios.get(url + '/myFavorite');
-    const generateId = async () => {
-      let newId = -1;
-
-      await myFavoriteList.forEach((item: myFavoriteItem) => {
-        if (item.id >= newId) newId = item.id;
-      });
-
-      newId += 1;
-
-      return newId;
-    };
 
     state.id = state.id === null ? await generateId() : state.id;
     state.name = state.name === null ? await myFavoriteList.name : state.name;
@@ -64,6 +55,7 @@ export default () => {
     await renderMyFavorite();
     await chooseSectionRender();
     await generateName();
+    await getNumOfSlides();
     renderSizeInfo();
     renderBreadName();
     renderMeatsName();

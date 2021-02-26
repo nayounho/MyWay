@@ -340,7 +340,7 @@ let myFavorite = [
         id: 'bread1', name: '9-Grain Honey Oat Bread', calories: 230, quantity: 1
       },
       {
-        id: 'meats1', name: 'BBQ Pulled Pork', calories: 200, quantity: 2, url: 'https://www.subway.co.kr/images/menu/sandwich_pm08.jpg'
+        id: 'meats23', name: 'Subway Club Meats', calories: 90, quantity: 2, url: 'https://www.subway.co.kr/images/menu/sandwich_fl04.jpg'
       },
       {
         id: 'cheese1', name: 'American Cheese', calories: 40, quantity: 1
@@ -365,57 +365,7 @@ let myFavorite = [
         id: 'bread1', name: '9-Grain Honey Oat Bread', calories: 230, quantity: 1
       },
       {
-        id: 'meats1', name: 'BBQ Pulled Pork', calories: 200, quantity: 2, url: 'https://www.subway.co.kr/images/menu/sandwich_pm08.jpg'
-      },
-      {
-        id: 'cheese1', name: 'American Cheese', calories: 40, quantity: 1
-      },
-      {
-        id: 'veggies1', name: 'Banana Peppers', calories: 0, quantity: 1
-      },
-      {
-        id: 'sauce1', name: 'Barbecue Sauce', calories: 35, quantity: 3
-      },
-      {
-        id: 'extras1', name: 'Avocado', calories: 60, quantity: 1
-      },
-    ],
-    calories: 565,
-  },
-  {
-    id: 4,
-    name: '당충전',
-    item: [
-      {
-        id: 'bread1', name: '9-Grain Honey Oat Bread', calories: 230, quantity: 1
-      },
-      {
-        id: 'meats1', name: 'BBQ Pulled Pork', calories: 200, quantity: 2, url: 'https://www.subway.co.kr/images/menu/sandwich_pm08.jpg'
-      },
-      {
-        id: 'cheese1', name: 'American Cheese', calories: 40, quantity: 1
-      },
-      {
-        id: 'veggies1', name: 'Banana Peppers', calories: 0, quantity: 1
-      },
-      {
-        id: 'sauce1', name: 'Barbecue Sauce', calories: 35, quantity: 3
-      },
-      {
-        id: 'extras1', name: 'Avocado', calories: 60, quantity: 1
-      },
-    ],
-    calories: 565,
-  },
-  {
-    id: 5,
-    name: '당나라',
-    item: [
-      {
-        id: 'bread1', name: '9-Grain Honey Oat Bread', calories: 230, quantity: 1
-      },
-      {
-        id: 'meats1', name: 'BBQ Pulled Pork', calories: 200, quantity: 2, url: 'https://www.subway.co.kr/images/menu/sandwich_pm08.jpg'
+        id: 'meats15', name: 'Meatballs', calories: 260, quantity: 2, url: 'https://www.subway.co.kr/images/menu/sandwich_cl03.jpg'
       },
       {
         id: 'cheese1', name: 'American Cheese', calories: 40, quantity: 1
