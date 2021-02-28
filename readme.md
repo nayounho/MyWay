@@ -28,7 +28,7 @@ ___
 
 ### Stack
 
-- HTML/CSS
+- HTML
 
 - JavaScript
 
