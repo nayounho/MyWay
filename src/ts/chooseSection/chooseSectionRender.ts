@@ -1,10 +1,9 @@
 import type { Category } from '../state/types'
-
-const axios = require('axios');
-const url = 'http://localhost:7000';
+import commonConfig from '../../common.config';
+import axios from 'axios';
 
 const renderMenuList = async (item: string, btnType: string) => {
-  const { data: items }: { data: Category[] } = await axios.get(url + `/menu.${item}`);
+  const { data: items }: { data: Category[] } = await axios.get(commonConfig.SERVER_URL + `/menu.${item}`);
 
   const $parentNode = document.querySelector(`.${item}__item`) as HTMLUListElement;
   const $title = document.querySelector(`.${item}__title`) as HTMLUListElement;

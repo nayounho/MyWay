@@ -1,12 +1,12 @@
-const axios = require('axios');
-const url = 'http://localhost:7000';
+import axios from 'axios';
+import commonConfig from '../../common.config';
 
 import type { myFavoriteItem } from '../state/types';
 
 export default async () => {
   const {
     data: myFavoriteList
-  } = await axios.get(url + '/myFavorite');
+  } = await axios.get(commonConfig.SERVER_URL + '/myFavorite');
   let newId = -1;
 
   await myFavoriteList.forEach((item: myFavoriteItem) => {

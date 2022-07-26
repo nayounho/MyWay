@@ -6,8 +6,7 @@ import renderSizeInfo from '../customSection/renderSizeInfo'
 import { renderBreadName, renderMeatsName, renderDynamicList } from '../customSection/renderSelectedItem'
 import renderChooseSection from '../chooseSection/renderChooseSectionByMyFavorite';
 import selectModalTitle from '../chooseSection/selectModalTitle';
-
-const axios = require('axios');
+import axios from 'axios';
 
 const $mywayList = document.querySelector('.myway__list') as HTMLUListElement;
 const $titleInput = document.querySelector('.title__input') as HTMLInputElement;

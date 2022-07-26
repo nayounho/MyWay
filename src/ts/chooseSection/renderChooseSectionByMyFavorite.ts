@@ -1,11 +1,10 @@
 import state from '../state/state';
 import type { Category, MenuState } from '../state/types';
-
-const axios = require('axios');
-const url = 'http://localhost:7000';
+import commonConfig from '../../common.config';
+import axios from 'axios';
 
 export default async () => {
-  const { data: totalList }: { data: MenuState } = await axios.get(url + '/menu');
+  const { data: totalList }: { data: MenuState } = await axios.get(commonConfig.SERVER_URL + '/menu');
 
   const selectedCategories = state.selectedItem.map(item => item.id);
   

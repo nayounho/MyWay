@@ -1,8 +1,7 @@
 import { getNumOfSlides } from '../state/carouselState';
 import spinner from '../utils/spinner';
-
-const axios = require('axios');
-const url = 'http://localhost:7000';
+import commonConfig from '../../common.config';
+import axios from 'axios';
 
 import state from '../state/state';
 import renderMyFavorite from './renderMyFavorite';
@@ -21,7 +20,7 @@ export default () => {
     if ($target.matches('.delete-myway')) {
       const $li = $target.parentNode?.parentNode?.parentNode as HTMLElement;
 
-      await axios.delete(url + `/myFavorite/${$li.id}`);
+      await axios.delete(commonConfig.SERVER_URL + `/myFavorite/${$li.id}`);
 
       await renderMyFavorite();
       await getNumOfSlides();

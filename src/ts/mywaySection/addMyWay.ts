@@ -1,7 +1,6 @@
 import spinner from '../utils/spinner';
-
-const axios = require('axios');
-const url = 'http://localhost:7000';
+import commonConfig from '../../common.config';
+import axios from 'axios';
 
 import state from '../state/state';
 import renderMyFavorite from './renderMyFavorite';
@@ -34,12 +33,12 @@ export default () => {
         return;
       }
       
-    const { data: myFavoriteList } = await axios.get(url + '/myFavorite');
+    const { data: myFavoriteList } = await axios.get(commonConfig.SERVER_URL + '/myFavorite');
 
     state.id = state.id === null ? await generateId() : state.id;
     state.name = state.name === null ? await myFavoriteList.name : state.name;
 
-    await axios.post(url + '/myFavorite', {
+    await axios.post(commonConfig.SERVER_URL + '/myFavorite', {
       id: state.id,
       name: $titleInput.value,
       item: state.selectedItem,

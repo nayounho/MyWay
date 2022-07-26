@@ -1,9 +1,8 @@
-import spinner from '../utils/spinner';
-
-const axios = require('axios');
+import commonConfig from '../../common.config';
+import axios from 'axios';
 
 const render = async () => {
-  const myFavorites = await axios.get('http://localhost:7000/myFavorite');
+  const myFavorites = await axios.get(`${commonConfig.SERVER_URL}/myFavorite`);
   const $mywayList = document.querySelector('.myway__list') as HTMLUListElement;
 
   let html = '';

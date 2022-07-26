@@ -1,4 +1,5 @@
-const axios = require('axios');
+import axios from 'axios';
+import commonConfig from '../../common.config';
 
 let carState = {
   numOfSlides: 0,
@@ -6,7 +7,7 @@ let carState = {
 }
 
 const getNumOfSlides = async () => {
-  const myFavoriteList = await axios.get('http://localhost:7000/myFavorite');
+  const myFavoriteList = await axios.get(`${commonConfig.SERVER_URL}/myFavorite`);
 
   carState.numOfSlides = myFavoriteList.data.length;
 };

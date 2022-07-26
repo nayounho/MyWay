@@ -1,7 +1,6 @@
 import type { MenuState } from './types';
-
-const axios = require('axios');
-const url = 'http://localhost:7000';
+import commonConfig from '../../common.config';
+import axios from 'axios';
 
 let menuState: MenuState = {
   bread: [],
@@ -13,7 +12,7 @@ let menuState: MenuState = {
 }
 
 const getMenu = async () => {
-  const { data : menu }: { data: MenuState } = await axios.get(url + '/menu')
+  const { data : menu }: { data: MenuState } = await axios.get(commonConfig.SERVER_URL + '/menu')
   menuState = menu;
 }
 
