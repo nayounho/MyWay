@@ -389,8 +389,8 @@ const app = express();
 app.use(express.static('public'));
 app.use(express.json());
 
-app.listen('7000', () => {
-  console.log('Server is listening on http://localhost:7000');
+app.listen('8080', () => {
+  console.log('Server is listening on http://localhost:8080');
 });
 
 app.get('/menu', (_, res) => {
