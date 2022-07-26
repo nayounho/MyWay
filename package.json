@@ -20,24 +20,24 @@
   },
   "homepage": "https://github.com/nayounho/MyWay#readme",
   "devDependencies": {
-    "axios": "^0.21.1",
-    "css-loader": "^5.0.2",
-    "eslint": "^7.20.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-html": "^6.1.1",
-    "eslint-plugin-import": "^2.22.1",
-    "node-sass": "^5.0.0",
-    "nodemon": "^2.0.7",
-    "sass-loader": "^11.0.1",
-    "style-loader": "^2.0.0",
-    "ts-loader": "^8.0.17",
-    "typescript": "^4.1.5",
-    "webpack": "^5.22.0",
-    "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "axios": "^0.27.2",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "html-webpack-plugin": "^5.1.0"
+    "express": "^4.18.1",
+    "html-webpack-plugin": "^5.5.0"
   }
 }
